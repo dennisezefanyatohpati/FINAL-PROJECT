@@ -3,13 +3,22 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{setspace}
 \usepackage{ragged2e}
+\usepackage{subcaption}
+
+\usepackage{graphicx}
+\graphicspath{ {./Figures/images/} }
+
+\usepackage{biblatex}
+\addbibresource{references.bib}
 
 
 \setlength{\parskip}{1em}
 
 \begin{document}
 \onehalfspacing
-\noindent
-\include{introduction}
+
+\include{cover}
+\include{Content/introduction}
+
 
 \end{document}
