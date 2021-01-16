@@ -1,7 +1,11 @@
-\documentclass[11pt]{article}
+\documentclass[11pt, a4paper, oneside]{article}
 
 \usepackage[margin=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+
 \usepackage{setspace}
+\setlength{\parskip}{1em}
+
 \usepackage{ragged2e}
 \usepackage{subcaption}
 
@@ -11,14 +15,42 @@
 \usepackage{biblatex}
 \addbibresource{references.bib}
 
+\usepackage{epigraph}
 
-\setlength{\parskip}{1em}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor= black,  %choose some color if you want links to stand out
+}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%              Start Document          %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \onehalfspacing
 
-\include{cover}
-\include{Content/introduction}
+%___COVER_________________________________________%
+\input{cover}
+
+%___TABLE OF CONTENT______________________________%
+\tableofcontents
+ \renewcommand*\contentsname{Contents}
+\newpage
+
+%___INTRODUCTION__________________________________%
+\input{Content/introduction}
+
+%___LIT Review__________________________________%
+\input{Content/literature_review}
+
+%___Methodology__________________________________%
+\input{Content/methodology}
+
+%___Results__________________________________%
+\input{Content/Results}
+
 
 
 \end{document}
