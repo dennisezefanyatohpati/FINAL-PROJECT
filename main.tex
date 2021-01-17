@@ -16,6 +16,17 @@
 \addbibresource{references.bib}
 
 \usepackage{epigraph}
+\usepackage{mathtools}
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
 
 \usepackage{hyperref}
 \hypersetup{
@@ -42,15 +53,19 @@
 %___INTRODUCTION__________________________________%
 \input{Content/introduction}
 
-%___LIT Review__________________________________%
+%___LIT Review____________________________________%
 \input{Content/literature_review}
 
-%___Methodology__________________________________%
+%___Methodology___________________________________%
 \input{Content/methodology}
 
-%___Results__________________________________%
+%___Results_______________________________________%
 \input{Content/Results}
 
+%___Bibliography__________________________________%
+\newpage
+\printbibliography
 
+\input{Content/appendix_a}
 
 \end{document}
