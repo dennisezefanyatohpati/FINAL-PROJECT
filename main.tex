@@ -2,6 +2,7 @@
 
 \usepackage[margin=25mm]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 
 \usepackage{setspace}
 \setlength{\parskip}{1em}
@@ -21,6 +22,7 @@
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
 
+\usepackage{listliketab}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
@@ -45,10 +47,22 @@
 %___COVER_________________________________________%
 \input{cover}
 
+%___PRE-CONTENT___________________________________%
+
+\input{Content/project_description}
+\input{Content/abstract}
+\input{Content/acknowlegment}
+
+
 %___TABLE OF CONTENT______________________________%
-\tableofcontents
- \renewcommand*\contentsname{Contents}
 \newpage
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\newpage
+
+\listoffigures
+\listoftables
 
 %___INTRODUCTION__________________________________%
 \input{Content/introduction}
