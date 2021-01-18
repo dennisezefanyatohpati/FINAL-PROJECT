@@ -3,6 +3,7 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{csquotes}
 
 \usepackage{setspace}
 \setlength{\parskip}{1em}
@@ -18,6 +19,7 @@
 
 \usepackage{epigraph}
 \usepackage{mathtools}
+\usepackage{lipsum}
 
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
@@ -48,23 +50,18 @@
 \input{cover}
 
 %___PRE-CONTENT___________________________________%
-
+\pagenumbering{gobble}
+\clearpage
 \input{Content/project_description}
 \input{Content/abstract}
 \input{Content/acknowlegment}
 
-
 %___TABLE OF CONTENT______________________________%
-\newpage
-\thispagestyle{empty}
-\setcounter{page}{0}
-\tableofcontents
-\newpage
-
-\listoffigures
-\listoftables
+\input{Content/content_table}
+\clearpage
 
 %___INTRODUCTION__________________________________%
+\pagenumbering{arabic}
 \input{Content/introduction}
 
 %___LIT Review____________________________________%
@@ -75,6 +72,9 @@
 
 %___Results_______________________________________%
 \input{Content/Results}
+
+%___Conclusion_______________________________________%
+\input{Content/conclusion}
 
 %___Bibliography__________________________________%
 \newpage
