@@ -16,7 +16,7 @@ To understand the flow behaviour of various undertray geometry, fluid dynamics a
 \subsubsection{Geometry Generation}
 Computer-aided geometry design (CAGD) is a modern systems in computational aided design to produce an external geometry\cite{Cummings2015AppliedAerodynamics}. The geometry changes of every analyses came in a step which results in high number of drawings, therefore, SolidWorks was used in this project to simplify the process. The SolidWorks geometry both 2D and 3D could be directly imported as active CAD which advantageous in saving time and memory.
 
-In producing 2D geometry, SolidWorks are able to define the body and fluid surface at the same time which can be directly imported to mesh. The 3D bluff body can be directly imported to Design Modeller, however, there are number of step required since the SolidWorks geometry does not define the fluid body. To Create the fluid body, enclosure has to applied. Enclosure generates a geometry which surround the target body (bluff body) as a representation of the atmosphere. Then Boolean is applied to the fluid body, this process subtract the bluff body from the fluid body and create representation just for the flow around the bluff body which then  can be directly integrated to the meshing process on ANSYS Workbench.
+\noindent In producing 2D geometry, SolidWorks are able to define the body and fluid surface at the same time which can be directly imported to mesh. The 3D bluff body can be directly imported to Design Modeller, however, there are number of step required since the SolidWorks geometry does not define the fluid body. To Create the fluid body, enclosure has to applied. Enclosure generates a geometry which surround the target body (bluff body) as a representation of the atmosphere. Then Boolean is applied to the fluid body, this process subtract the bluff body from the fluid body and create representation just for the flow around the bluff body which then  can be directly integrated to the meshing process on ANSYS Workbench.
 %INSERT THE PHOTO OF 3D and 2D geometry
 
 \subsubsection{Grid Generation (Meshing)}
@@ -27,12 +27,17 @@ The surface or body which have been defined becomes the basis for the meshing. M
 \noindent One crucial facet of an undertray flow is generation of boundary layer and how it interacts with the moving floor, the accuracy of this aspect is depend on the quality of layer grid growth near the wall or wall function. To generate a good inflation layer, it is important to make sure the y+ value (first layer height grid) does not exceed the inner boundary layer region which can be done using the equation:
 
 \begin{equation}
-    y^+ = \frac{\rho u_\tau \partial y}{\mu}, where \quad u_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
+    y^+ = \frac{\rho U_\tau \partial y}{\mu}, where \quad U_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
 \end{equation}
 
+\noindent Figure \ref{fig:inflation layer} shows the illustration of y+ value on a wall function. The turbulence model on the solver also has to be a consideration in defining the y+ value, some turbulence modelling require a very low n y+ and some are able to tolerate high y+ value. Detail regarding y+ value in various turbulent model will be discussed on the next section. 
 
-
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics{Figures/inflation_layer.jpg}
+    \caption{representation of y+ on a near wall function\cite{Inflate4Zealand}.}
+    \label{fig:inflation layer}
+\end{figure}
 
 
 
