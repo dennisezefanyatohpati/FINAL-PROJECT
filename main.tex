@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper, oneside]{article}
 
 \usepackage[margin=25mm]{geometry}
-\usepackage[utf8]{inputenc}
+\usepackage[]{inputenc}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
@@ -31,26 +31,23 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-
-
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks=false, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
     linkcolor= black,  %choose some color if you want links to stand out
 }
 
+\onehalfspacing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%              Start Document          %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\onehalfspacing
-
 %___COVER_________________________________________%
 \input{cover}
 
-%___PRE-CONTENT___________________________________%
+%___PRE CONTENT___________________________________%
 \pagenumbering{gobble}
 \clearpage
 \input{Content/project_description}
@@ -73,6 +70,9 @@
 
 %___Results_______________________________________%
 \input{Content/Results}
+
+%___Sustainability_______________________________________%
+\input{Content/sustainability}
 
 %___Conclusion_______________________________________%
 \input{Content/conclusion}
