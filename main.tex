@@ -11,6 +11,8 @@
 \usepackage{ragged2e}
 \usepackage{subcaption}
 
+\onehalfspacing
+
 \usepackage{graphicx}
 \graphicspath{ {./Figures/images/} }
 \usepackage{pdfpages}
@@ -35,10 +37,18 @@
 \hypersetup{
     colorlinks=false, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
-    linkcolor= black,  %choose some color if you want links to stand out
+    linkcolor=black,  %choose some color if you want links to stand out
 }
 
-\onehalfspacing
+\usepackage{fontspec}
+\setmainfont[Path=./Font/,
+    BoldItalicFont=Calibri-Bold-Italic.ttf,
+    BoldFont      =Calibri-Bold.ttf,
+    ItalicFont    =Calibri-Italic.ttf]{Calibri-Regular.ttf}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%              Start Document          %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,6 +66,7 @@
 
 %___TABLE OF CONTENT______________________________%
 \input{Content/content_table}
+\input{Content/nomenclatures}
 \clearpage
 
 %___INTRODUCTION__________________________________%
@@ -81,6 +92,7 @@
 \newpage
 \printbibliography
 
+%___Appendix__________________________________%
 \input{Content/appendix_a}
 
 \end{document}
