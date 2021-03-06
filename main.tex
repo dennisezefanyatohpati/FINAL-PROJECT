@@ -11,7 +11,7 @@
 \usepackage{ragged2e}
 \usepackage{subcaption}
 
-\onehalfspacing
+\onehalfspacing %SPACING CONFIGURATION
 
 \usepackage{graphicx}
 \graphicspath{ {./Figures/images/} }
@@ -33,6 +33,8 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
+\usepackage[labelfont=bf]{caption}
+
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks=false, %set true if you want colored links
@@ -44,14 +46,15 @@
 \setmainfont[Path=./Font/,
     BoldItalicFont=Calibri-Bold-Italic.ttf,
     BoldFont      =Calibri-Bold.ttf,
-    ItalicFont    =Calibri-Italic.ttf]{Calibri-Regular.ttf}
+    ItalicFont    =Calibri-Italic.ttf
+    ]{Calibri-400.ttf}
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%              Start Document          %%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%        Begin Document       %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 %___COVER_________________________________________%
@@ -80,19 +83,33 @@
 \input{Content/methodology}
 
 %___Results_______________________________________%
-\input{Content/Results}
+\input{Content/results/results_2D}
 
-%___Sustainability_______________________________________%
-\input{Content/sustainability}
+%\input{Content/results/results_3D}
 
-%___Conclusion_______________________________________%
-\input{Content/conclusion}
+%___Conclusion____________________________________%
+%\input{Content/conclusion}
+
+%___Sustainability________________________________%
+%\input{Content/sustainability}
 
 %___Bibliography__________________________________%
 \newpage
 \printbibliography
 
-%___Appendix__________________________________%
-\input{Content/appendix_a}
+%___Appendix______________________________________%
+\flushleft
+\input{Content/appendixes/appendix_a}
+
+\input{Content/appendixes/appendix_b}
+
+\input{Content/appendixes/appendix_c}
+
+\input{Content/appendixes/appendix_d}
+
+\input{Content/appendixes/appendix_x}
+
+
+
 
 \end{document}
