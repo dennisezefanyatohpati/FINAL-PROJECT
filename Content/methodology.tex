@@ -11,15 +11,10 @@ To understand the flow behaviour of various undertray geometry, fluid dynamics a
     \label{fig:project methodology}
 \end{figure}
 
-\subsection{Pre-Processing}
-\subsubsection{Geometry Generation}
-Computer-aided geometry design (CAGD) is a modern systems in computational aided design to produce an external geometry\cite{Cummings2015AppliedAerodynamics}. The geometry changes of every analyses came in a step which results in high number of drawings, therefore, SolidWorks was used in this project to simplify the process. The SolidWorks geometry both 2D and 3D could be directly imported as active CAD which advantageous in saving time and memory.
-
-\noindent In producing 2D geometry, SolidWorks are able to define the body and fluid surface at the same time which can be directly imported to mesh. The 3D bluff body can be directly imported to Design Modeller, however, there are number of step required since the SolidWorks geometry does not define the fluid body. To Create the fluid body, enclosure has to applied. Enclosure generates a geometry which surround the target body (bluff body) as a representation of the atmosphere. Then Boolean is applied to the fluid body, this process subtract the bluff body from the fluid body and create representation just for the flow around the bluff body which then  can be directly integrated to the meshing process on ANSYS Workbench.
-%INSERT THE PHOTO OF 3D and 2D geometry
+\subsection{Pre-Processing \& Solver Setup}
 
 \subsubsection{Grid Generation (Meshing)}
-The surface or body which have been defined becomes the basis for the meshing. Meshing app which integrated in ANSYS workbench provide a user-friendly, simple, and fast meshing generator. Due to the constrain of computational power and time, unstructured triangular (2D) and tetrahedral (3D) mesh were used. 
+The surface or body which have been defined from SolidWorks becomes the basis for the meshing. Meshing app which integrated in ANSYS workbench provide a user-friendly, simple, and fast meshing generator. Due to the constrain of computational power and time, unstructured triangular (2D) and tetrahedral (3D) mesh were widely used with quadrilateral (2D) and triangular prism (3D) near the wall as an inflation layer to capture the growth of boundary layer and reduce numerical diffusion \cite{Lanfrit2005BestFLUENT}.
 
 \noindent Looking back to the goal of the 2D and 3D bluff body simulation is to obtain and analyse the trend in geometry changes of an undertray, therefore, a non-detailed yet decent mesh could be generated. Local refinement around the body that affected by the fluid flow is recommended \cite{Lanfrit2005BestFLUENT} to achieve a reasonable results and flow representation especially around the undertray, moreover this technique allows larger mesh on the far field section less likely be affected or affecting the result. Other aspect of reasonable meshing is to be aware of the mesh properties such as skewness and growth ratio. For automotive application, it is recommended to have skewness less then 0.45 and maximum growth rate less than 20\% \cite{Lanfrit2005BestFLUENT}. 
 
@@ -33,20 +28,55 @@ The surface or body which have been defined becomes the basis for the meshing. M
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics{Figures/inflation_layer.jpg}
-    \caption{representation of y+ on a near wall function \cite{Anonymous2013Inflate4Blog}}
+    \includegraphics[height=4cm]{Figures/inflation_layer.jpg}
+    \caption{Representation of y+ on a near wall function \cite{Anonymous2013Inflate4Blog}}
     \label{fig:inflation layer}
 \end{figure}
 
 
 
-\subsection{Numerical Method}
-%condition 
-%turbulence modelling
--LEFT EMPTY-
-LEAVE UNTIL 3D ANALYSIS IS DEFINED
+\subsection{Boundary Conditions}
 
-\subsection{Post-Processing}
-%very short talk about PST from ansys workbench
-The final step is to analyse the flow characteristic and behaviour. PST is an app integrated in the ANSYS Workbench provide a fast and reliable platform to produce graphics such as contour, streamline, flow vector, etc which could be used to help analyse the overall aerodynamics of the body. 
+\begin{table}[!ht]
+    \centering
+    \caption{Boundary Conditions for 2D and 3D ANSYS Fluent setup}
+    \label{tab:Boundary Conditions}
+    \vspace{-0.5cm}
+\begin{center}
+\begin{tabular}{||p{4cm}|p{4cm}|p{7cm}||}
+ \hline
+ Named Region & Boundary Condition & Property Details\\
+ \hline \hline
+ \multicolumn{3}{||c||}{General Properties} \\
+ \hline
+ 
+ Inlet & Inlet velocity & Velocity = 16.667 m/s (or 40 km/h)\\
+ \hline
+ Outlet & Outlet Pressure  & Pressure = 101325 Pa  \\
+ \hline
+ Undertray (2D Enclosed)/Bluff Body & Stationary Wall & No-slip condition\\
+ \hline
+ Moving Floor & Moving Wall & Velocity = 16.667 m/s (or 40 km/h) in the flow direction\\
+ \hline
+ Enclosure &   Fluid (Air)  & Pressure = 101325 Pa
+Temperature = 288.15 K
+Density = 1.225 kg/m3
+ISA Sea Level Condition\\
+ 
+ \hline
+ \multicolumn{3}{||c||}{3D analyses} \\
+ \hline
+ 
+ Symmetry Top & Symmetry  & -\\
+ \hline
+ Symmetry Side & Symmetry & -\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Numerical Method}
+
+
 
