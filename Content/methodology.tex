@@ -34,6 +34,24 @@ The surface or body which have been defined from SolidWorks becomes the basis fo
 \end{figure}
 
 
+\subsection{Numerical Method}
+Turbulence model is a crucial aspect in approximating the unsteady turbulent fluctuation \cite{Cummings2015AppliedAerodynamics}. The quality of the turbulence modelling significantly impact the fidelity of the simulations \cite{Lanfrit2005BestFLUENT}.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Boundary Conditions}
 
@@ -64,9 +82,11 @@ Density = 1.225 kg/m3
 ISA Sea Level Condition\\
  
  \hline
- \multicolumn{3}{||c||}{3D analyses} \\
+ \multicolumn{3}{||c||}{3D Analyses} \\
  \hline
  
+ Symmetry Body & Symmetry  & -\\
+ \hline
  Symmetry Top & Symmetry  & -\\
  \hline
  Symmetry Side & Symmetry & -\\
@@ -76,7 +96,11 @@ ISA Sea Level Condition\\
 \end{center}
 \end{table}
 
-\subsection{Numerical Method}
+\noindent Table \ref{tab:Boundary Conditions} shows Boundary conditions for 2D and 3D analyses in ANSYS Fluent solver. The main goal is to simulate the flow behaviour at bottom region of the car, therefore, a moving floor was employed in all simulation with the same magnitude and direction of the flow. The usage of moving ground (or belt in wind tunnel) is a physically correct and best option to capture a ground effect such in an undertray \cite{Zhang2006GroundCars}\cite{Burgin1986WINDEFFECT}. Simulation environment was set and assumed to International Standard Atmospheric (ISA) condition at sea level. 
+
+\noindent In 3 dimensional simulation, side, far-side, and top surface of the flow-field were set to symmetry where fluxes and normal gradients of all variables are assumed zero \cite{ANSYS2009SymmetryConditions} as recommended by Lanfrit \cite{Lanfrit2005BestFLUENT}. This setup along with the moving floor was surmised to provide the best results in simulating the race car or body in an actual racing track.
+
+
 
 
 

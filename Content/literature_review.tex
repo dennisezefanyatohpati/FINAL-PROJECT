@@ -5,7 +5,7 @@ In 1949 Ludwig Prandtl stated, "The term aerodynamics is generally used for prob
 
 \noindent Aerodynamics is generally classified into external (flow around  the body) and internal (flow inside the body). This paper will focus on external aerodynamics which focus on the force generation due to the air-stream behaviour around the body of interest. In the automotive industry, external force plays an important part since the overall performance of the car is dependent on the aerodynamics forces created which significantly influence and improve the vehicle shape to its aerodynamics advantage \cite{Scibor-Rylski1984RoadAerodynamics}. Some of the aerodynamics consideration to vehicle's shape influence include large downforce generation, downforce balance between from and rear tyre, and drag minimisation. Table \ref{Table1} shows the effect of downforce to a racing car's acceleration, it can be seen that downforce significantly improve the acceleration time by -1.06 seconds, rate of acceleration by 4.5 $m/s^2$, and power by 124 kilowatt. 
 
-\begin{table}[ht]
+\begin{table}[!ht]
 \caption{\label{Table1} Aerodynamic downforce effect of a racing car acceleration \cite{Scibor-Rylski1984RoadAerodynamics}.}
 \vspace{-5mm}
 \begin{center}
@@ -55,13 +55,14 @@ Re = \frac{\rho v d}{\mu} = \frac{inertial force}{viscous force}
 \subsubsection{Boundary Layer}
 Boundary layer is the referred as the viscous flow region adjacent to the body surface \cite{Anderson2007FundamentalsJr.}. The layer of air stream surrounding the body at a distance near the wall move with various relative speed, therefore this create a velocity gradient ($\frac{\partial V}{\partial y}$) which the speed on the surface is zero (non-slip condition) to local velocity outside the surface layer \cite{Scibor-Rylski1984RoadAerodynamics}. This layer is also referred as boundary layer. Figure \ref{fig:3} show the development of boundary layer on a flat plate, it started with laminar flow which transitioned into turbulent flow with formation of eddies in it.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
     \includegraphics[scale=0.6]{Figures/BL_laminar_turbulent.png}
     \caption{The difference of boundary layer along flat plat \cite{Frei2017WhichApplication}.}
     \label{fig:3}
 \end{figure}
 
+ 
 \noindent From figure \ref{fig:3}, it can be seen that there are two main types of boundary layer flow: laminar and turbulent. Laminar is demonstrated close to the leading edge where the fluid travel smoothly which shows a low velocity gradient and low friction near the wall. When the velocity gradient increases and the friction on one layer to another is significant, the flow can be stated as turbulent \cite{Scibor-Rylski1984RoadAerodynamics}. This can be indicated with irregular and random fluid movement with presence of eddies. Boundary layer is important due to its ability in producing drag due to skin friction. When the local velocity increases, the velocity gradient $(\frac{\partial V}{\partial y})_{y=0} $ and shear stress near the wall ($\tau_w $) also increases with the overall drag.
 
 \noindent It has to be noted that turbulent flow and separated flow are related but different flow characteristic. Flow separation occurs where the air stream effect is reversed when the surface geometry is curving away . When the air stream slows down, the pressure gradient inverses which create an adverse pressure gradient and then cause a thickening in boundary layer \cite{Scibor-Rylski1984RoadAerodynamics}. The condition let the shear stress (friction) and adverse pressure gradient bring the molecules at the very near of the wall come to stop. At this stage the boundary layer separates  and create a region of reversed flow. This condition is illustrated on figure \ref{fig:flow separation}.
