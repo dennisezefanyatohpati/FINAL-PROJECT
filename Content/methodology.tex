@@ -35,27 +35,18 @@ The surface or body which have been defined from SolidWorks becomes the basis fo
 
 
 \subsection{Numerical Method}
-Turbulence model is a crucial aspect in approximating the unsteady turbulent fluctuation \cite{Cummings2015AppliedAerodynamics}. The quality of the turbulence modelling significantly impact the fidelity of the simulations \cite{Lanfrit2005BestFLUENT}.  
+Turbulence model is a crucial aspect in approximating the unsteady turbulent fluctuation \cite{Cummings2015AppliedAerodynamics}. The quality of the turbulence modelling significantly impact the fidelity of the simulations \cite{Lanfrit2005BestFLUENT}. Due to the time constraint, variable amount, and computational power, a steady state method was used entirely in this paper. Two-equation Reynolds-Averaged Navier-Stokes (RANS) approach was also used to solve time averaged flow \cite{Cummings2015AppliedAerodynamics}. With a reasonable quality of mesh, practical lift and drag trend can be achieved which then can be studied. Realizable K-$\epsilon$ and K-$\omega$ Shear Stress Transport (SST) were used in this paper to solve the downforce and drag of the undertray and bluff body.  
 
+\subsubsection{Realizable K-$\epsilon$ Models}
+k-$\epsilon$  turbulence model is a  two-equation transport model which specifically solve the turbulence kinetic energy (k) and dissipation rate ($\epsilon$) \cite{Andersson2011Turbulent-flowModelling}\cite{Mansour1989Near-wallModeling}\cite{Ansys2006ModelingFlows}. The standard model is robust and widely-used in broad application of engineering turbulence modelling, however the nature of  k-$\epsilon$ family is not able to calculate some of the $\epsilon$ terms which can be anticipated using wall function. Moreover, k-$\epsilon$ does not perform well for flow with strong separation and large adverse pressure gradient, which the major feature of an undertray's diffuser \cite{Ansys2006ModelingFlows}.  Therefore realisable k-$\epsilon$ is broadly used in this analysis. The term 'realisable' itself allows some of mathematical satisfaction in computing the Reynolds stresses which improving its consistency of the turbulent flow. This specific transport model is crucial to capture important flow features of an undertray such as flow rotation, significant adverse pressure gradient, and vortex formation.
 
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{k-$\omega$ Shear Stress Transport (SST) Models}
+SST model is a 2 equation-model that combine both k-$\epsilon$ and k-$\omega$ \cite{Andersson2011Turbulent-flowModelling}\cite{Ansys2006ModelingFlows}.  k-$\epsilon$ is used in the free-stream and k-$\omega$ is used near the boundary wall means this model took the strength of both model allowing accurate prediction in all region. This model perform well on the region with adverse pressure gradient and  flow separation, moreover SST is know to have better performance compared to k-$\epsilon$ and does not required any wall function\cite{Andersson2011Turbulent-flowModelling}. However, a fine mesh ($y^+  < 5$) is required on the wall which increase the computational cost and time, as well it could over predict turbulent flow in a large strain area \cite{Andersson2011Turbulent-flowModelling}\cite{Ansys2006ModelingFlows}. 
 
 
 
 \subsection{Boundary Conditions}
-
-\begin{table}[!ht]
+\begin{table}[!htb]
     \centering
     \caption{Boundary Conditions for 2D and 3D ANSYS Fluent setup}
     \label{tab:Boundary Conditions}
@@ -63,6 +54,7 @@ Turbulence model is a crucial aspect in approximating the unsteady turbulent flu
 \begin{center}
 \begin{tabular}{||p{4cm}|p{4cm}|p{7cm}||}
  \hline
+ \centering
  Named Region & Boundary Condition & Property Details\\
  \hline \hline
  \multicolumn{3}{||c||}{General Properties} \\
@@ -70,7 +62,7 @@ Turbulence model is a crucial aspect in approximating the unsteady turbulent flu
  
  Inlet & Inlet velocity & Velocity = 16.667 m/s (or 40 km/h)\\
  \hline
- Outlet & Outlet Pressure  & Pressure = 101325 Pa  \\
+ Outlet & Outlet Pressure  & Gauge Pressure = 0 Pa  \\
  \hline
  Undertray (2D Enclosed)/Bluff Body & Stationary Wall & No-slip condition\\
  \hline
@@ -97,7 +89,7 @@ ISA Sea Level Condition\\
 \end{table}
 
 \noindent Table \ref{tab:Boundary Conditions} shows Boundary conditions for 2D and 3D analyses in ANSYS Fluent solver. The main goal is to simulate the flow behaviour at bottom region of the car, therefore, a moving floor was employed in all simulation with the same magnitude and direction of the flow. The usage of moving ground (or belt in wind tunnel) is a physically correct and best option to capture a ground effect such in an undertray \cite{Zhang2006GroundCars}\cite{Burgin1986WINDEFFECT}. Simulation environment was set and assumed to International Standard Atmospheric (ISA) condition at sea level. 
-
+\vspace{1cm}
 \noindent In 3 dimensional simulation, side, far-side, and top surface of the flow-field were set to symmetry where fluxes and normal gradients of all variables are assumed zero \cite{ANSYS2009SymmetryConditions} as recommended by Lanfrit \cite{Lanfrit2005BestFLUENT}. This setup along with the moving floor was surmised to provide the best results in simulating the race car or body in an actual racing track.
 
 

@@ -64,15 +64,14 @@ This section will utilise multiple type of bluff body will be used to simulate t
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale = 0.58]{Figures/2D_OF/2D_OF_GEOM.png}
+    \includegraphics[scale = 0.5]{Figures/2D_OF/2D_OF_GEOM.png}
     \caption{Four geometries generated for 2D open-flow analysis.}
     \label{fig:2D_OF_GEOM}
 \end{figure}
-\noindent The geometry can be grouped into 2 categories. The first category consist of A1, A2, \& A3, which focus on how the geometry of the bluff body sculpt the surrounding flow and affect the overall performance of the undertray. First geometry acts as the baseline model with a 35 degree slant angle at the rear body to simulate the flow separation that also occurs at rear of QFR car. Similar to geometry 1, the second geometry has a similar dimension without inlet angle and the slant angle with purpose of simulating an immediate separation at the rear. Geometry 3 has a similar configuration as geometry 2 with no inlet elevation and filleted corner in inlet region to provide a smooth flow at intake.
 
-\noindent Second category consist of geometry 4 which is the regeneration due to the result from previous analysis.
+\noindent The geometry can be grouped into 2 categories. The first category consist of A1, A2 which focus on how the geometry of the bluff body sculpt the surrounding flow and affect the overall performance of the undertray. First geometry acts as the baseline model with a 35 degree slant angle at the rear body to simulate the flow separation that also occurs at rear of QFR car. Similar to geometry 1, the second geometry has a similar dimension without inlet variable and the slant angle with purpose of simulating an immediate separation at the rear.
 
-\noindent This geometry used a curved diffuser configuration where one end is tangential to the throat. A construction line was made between two point of the diffuser as an angle reference point from the horizontal axis. In diffuser variable analysis, a rounded inlet such as geometry 3 without any elevation was used. The purpose of such rounded inlet and diffuser was initially surmised to allow smooth intake and slows flow separation in the diffuser region due to the sharp transition from previous analyses. A Slant angle of 35 degree was also decided to be utilised to provide geometric similarity to the QFR car.
+\noindent Second category consist of geometry 3 which is the regeneration due to the result from previous analysis. This geometry used a curved diffuser configuration where one end is tangential to the throat. A construction line was made between two point of the diffuser as an angle reference point from the horizontal axis. In diffuser variable analysis, a rounded inlet such as geometry 3 without any elevation was used. The purpose of such rounded inlet and diffuser was initially surmised to allow smooth intake and slows flow separation in the diffuser region due to the sharp transition from previous analyses. A Slant angle of 30 degree was also decided to be utilised to provide geometric similarity to the QFR car.
 
 \noindent A hybrid mesh was generated for this analysis. This consist of unstructured triangular and quadrilateral mesh (or inflation) near the bluff body and the floor to identify the effect of boundary layer interaction between the undertray and floor wall.  Detailed graphics of 2D open-flow mesh can be seen on \textbf{figure \ref{fig:2D_OF_MESH}} in \textbf{Appendix B}.
 %add details average of the mesh quality criterion (mesh number, AR, skewness, quality)
@@ -81,18 +80,47 @@ This section will utilise multiple type of bluff body will be used to simulate t
 
 \subsubsection{Results \& Discussion}
 
-\noindent A 2D computational simulations have been done and the results shown will be based on the downforce and drag of the entire bluff body. Analysis 1 and 2 has a geometric similarity apart from the slant angle. The first part of the discussion will focus on how slant angle affect the flow at the rear and it impacts the undertray's performance. Figure \ref{fig:2D_OF_A12_results} below depicts the variations in trend in downforce (left) for both diffuser and inlet angle. The variations of lift and drag due to the inlet angle also shown on figure \ref{fig:2D_OF_A12_results} (right).
+\noindent A 2D computational simulations have been done and the results shown will be based on the downforce and drag of the entire bluff body. Analysis 1 and 2 have a geometric similarity apart from the slant angle. The first part of the discussion will focus on how slant angle affect the rear flow and it impacts the undertray's performance. Figure \ref{fig:2D_OF_A12_results} below depicts the variations in trend in downforce (left) for both diffuser and inlet angle. The variations of lift and drag due to the inlet angle also shown on figure \ref{fig:2D_OF_A12_results} (right).
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale = 0.65]{Figures/Graph/2D_OF_A1-2.png}
-    \caption{Lift and drag variation plot of diffuser ange }
+    \includegraphics[scale = 0.6]{Figures/Graph/2D_OF_A1-2.png}
+    \caption{Lift and drag variation vs inlet and diffuser angle variable on geometry 1 and 2. }
     \label{fig:2D_OF_A12_results}
 \end{figure}
 
+\noindent The 2D enclosed analysis has range of 10 to 20 for inlet and diffuser angle, and this analysis was conducted to further investigate the flow behaviour in a larger range of elevation. In figure \ref{fig:2D_OF_A12_results} left, lift and drag trend due to the diffuser angle elevation can be observed. A significant drop in lift occurred for both A1 and A3 from 0 to 4 degrees. A small angle in diffuser allows the flow to stay attached to the diffuser wall, allowing slower expansion in pressure that increase the overall downforce. This can be indicated on the velocity contour on figure \ref{fig:2D_OF_10_4_Contour_compare} (left) below, where formation of adverse pressure gradient on the diffuser  (indicated in blue region) is delayed at 4 degrees compared to 10 degrees where separation occurred around the transition region. Further analysis in flow separation can be seen in figure \ref{fig:2D_OF_10_4_Contour_compare} (right)  that shows the comparison of wall shear and pressure along the undertray for both geometry 1 and 2. 
 
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.55]{Figures/2D_OF/10_4_O_COMPARE CONTOUR.PNG}
+    \caption{Comparison of 4 and 10 degrees diffuser angle with regard to flow separation on the diffuser region }
+    \label{fig:2D_OF_10_4_Contour_compare}
+\end{figure}
 
+\noindent Following the drop in lift at 4 degrees, degradation in downforce performance is indicated on the graph, representing the 2D enclosed lift analysis from 10 to 20 degrees. However, no significant drag changes and pattern emerged with the change of diffuser angle. From both analyses, the presence of slant angle deemed to not affect the overall lift and drag of bluff body on both geometries, which indicated by an identical lift and drag trend. It shown in figure \ref{fig:2D_OF_A1_CONTOUR}, Appendix B that flow separation occurred immediately at the slant angle which indicates a similar flow features at the rear compared to geometry 2. 
+
+\noindent On the other hand, the inlet variable shows a contrary trend compared to 2D Enclosed flow, where elevation of inlet angle is inversely proportional to the downforce. 
+
+\begin{figure}[!hb]
+   \noindent\makebox[\textwidth]{
+   \includegraphics[width=1\textwidth]{Figures/2D_OF/2D_OF_A1_CONTOUR_INLET_COMPARE.png}}
+   \caption{Comparison of velocity streamline and pressure contour of 6 (left), 10 (middle), and 22(right) degrees inlet angle. }
+   \label{fig:A1_Contour_inlet_compare}
+\end{figure}
+
+
+\noindent It was observed that sharp corner may increase the possibility of early separation at some variable and location. Therefore, geometry 3 was fabricated to overcome these problem and investigate further the similar variables. Figure \ref{fig:2D_OF_A4_results} below depicts the plot of variation in lift and drag vs inlet and diffuser angle of geometry 3.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{Figures/Graph/2D_OF_A4.png}
+    \caption{Lift and drag variation vs diffuser and inlet angle of geometry 3.}
+    \label{fig:2D_OF_A4_results}
+\end{figure}
+
+Similar trend emerged on the
 
 
 
