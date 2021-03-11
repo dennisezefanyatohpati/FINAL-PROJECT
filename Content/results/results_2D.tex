@@ -1,10 +1,10 @@
-\newpage
+
 \section{2 Dimensional Analysis}
-This section will discuss the trend and effect of various undertray variables in 2 dimensions. The variables tested consist of inlet angle \& diffuser angle which the optimised value will be used as a preliminary variable in 3 dimensional undertray design. The 2D analysis will consist of Enclosed flow analysis which use the Venturi-tube like geometry to simulate the flow of the undertray, and open-flow analysis used the bluff body to simulate the flow behaviour as well the interaction between the undertray and the bluff body. 
+This section will discuss the trend and effect of various undertray variables in 2 dimensions. The variables tested consist of inlet and diffuser angle where the optimised value will be used as a preliminary variable in 3 dimensional undertray design. The 2D analysis will consist of Enclosed flow analysis which use the Venturi-tube like geometry to simulate the flow of the undertray, and open-flow analysis used the bluff body to simulate the flow behaviour as well the interaction between the undertray and the bluff body. 
 
 \subsection{2D Enclosed Flow}
 \subsubsection{Overview}
-2D Enclosed flow analysis serve a purpose in creating fundamental understanding of the undertray flow physics. Diffuser and inlet angle was chosen to be the main variables which fundamentally known to affect the undertray's performance. It is so called 'Enclosed' due to its geometry which shaped like a half venturi meter which cap the analysis to only the lower part of the undertray without considering any surrounding flow ahead and behind the car it self.  %try to reference every paper which have the diffuser and inlet analysis %also reference the FSUK rules
+2D Enclosed flow analysis serve a purpose in creating fundamental understanding of the undertray flow physics. Diffuser and inlet angle was chosen to be the main variables which fundamentally known to affect the undertray's performance. It is so called 'Enclosed' due to its geometry which shaped like a half venturi meter which cap the flow analysis to only the lower part of the undertray without considering any surrounding flow ahead and behind the car it self.  %try to reference every paper which have the diffuser and inlet analysis %also reference the FSUK rules
 
 \subsubsection{Geometry and Mesh Generation}
 \noindent The general geometry of this analysis is illustrated on figure \ref{fig:2D_EN_Geom} below. A realistic preliminary dimension was chosen to obtain a general picture of the undertray shape in 2D. The geometry represents the underside of the car which consist of undertray (top-wall), moving-floor (bottom-wall), velocity-inlet (left), and outlet (right). At this stage, the length of the car was generalised to be 2000 mm, with 200 mm inlet and 600 mm diffuser horizontal length. Gap clearance (the minimum distance between the undertray and the floor) has been chosen to be 30 mm which comply the minimum gap clearance distance rules of FSUK. Geometry of undertrays was generated in 2 variable forms; the first form is the increase of diffuser angle from 10 to 20 degrees in the increments of 2 degrees, and accompanied with 10 degrees inlet angle for every geometry. The second form is the increase of inlet angle from 10 to 20 degrees in the increments of 2 degrees, and accompanied with 10 degrees diffuser angle for every geometry. This format allows a preliminary development in understanding the effect of both undertray's outlet and inlet angle in isolated flow-field. 
@@ -46,9 +46,7 @@ Results of this analysis will be discussed on the basis of how changes in outlet
 
 \noindent On the other hand, the inlet angle variable has a contrary result than previous variable. \textbf{Figure \ref{fig:2D_EN_result}} right shows that the lift  is inversely proportional to the drag as the inlet angle increases.  As the cross section area on the inlet nozzle converging, the flow is forced to convert the pressure energy into kinetic energy indicated by the increase its velocity which then drops the pressure in the undertray's throat. This condition creates a lower pressure region on the undertray's throat, hence increasing the downforce.This phenomena obeys the Bernoulli formula\textbf{ (equation \ref{eq:bernoulli})} where pressure and cross-sectional area is inversely proportional to the flow's velocity, assuming the flow in the inlet region are steady and incompressible.  Elevation in inlet angle also provide more tangential surface to be imposed by the incoming flow, this create a higher shear stress on the inlet wall and increase the overall drag. This condition also indicated on the first peak of the wall shear on figure \ref{fig:wall_shear_plot_2D_EN} left which shows a significant increase in shear stress at the corner between inlet and throat region.
 
-\noindent Further analysis of wall shear stress \textbf{(figure \ref{fig:wall_shear_plot_2D_EN} (right))} and static pressure \textbf{(figure \ref{fig:pressure_plot_2D_EN} (right))} plot for inlet angle variables in \textbf{appendix A} shows a general increase in shear stress with inlet angle elevation accompanied by the overall pressure drop as the angle increases. This explains increase in total downforce with the elevation of inlet angle.
-
-
+\noindent Further analysis of wall shear stress \textbf{(figure \ref{fig:wall_shear_plot_2D_EN} right)} and static pressure \textbf{(figure \ref{fig:pressure_plot_2D_EN} right)} plot for inlet angle variables in \textbf{Appendix A} shows a general increase in shear stress with inlet angle elevation accompanied by the overall pressure drop as the angle increases. This explains increase in total downforce with the elevation of inlet angle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2D OPEN FLOW ANALYSIS %%%
@@ -99,28 +97,36 @@ This section will utilise multiple type of bluff body will be used to simulate t
     \label{fig:2D_OF_10_4_Contour_compare}
 \end{figure}
 
-\noindent Following the drop in lift at 4 degrees, degradation in downforce performance is indicated on the graph, representing the 2D enclosed lift analysis from 10 to 20 degrees. However, no significant drag changes and pattern emerged with the change of diffuser angle. From both analyses, the presence of slant angle deemed to not affect the overall lift and drag of bluff body on both geometries, which indicated by an identical lift and drag trend. It shown in figure \ref{fig:2D_OF_A1_CONTOUR}, Appendix B that flow separation occurred immediately at the slant angle which indicates a similar flow features at the rear compared to geometry 2. 
+\noindent Following the drop in lift at 4 degrees, degradation in downforce performance is indicated on the graph, representing the 2D enclosed lift analysis from 10 to 20 degrees. However, no significant drag changes and pattern emerged with the change of diffuser angle. From both analyses, the presence of slant angle deemed to not affect the overall lift and drag of bluff body on both geometries, which indicated by an identical lift and drag trend. It shown in figure \ref{fig:2D_OF_A1_CONTOUR}, Appendix B that flow separation occurred immediately at the slant angle which indicates a similar flow features at the rear compared to geometry 2 (see figure \ref{fig:2D_OF_A2_CONTOUR}, Appendix B). 
 
-\noindent On the other hand, the inlet variable shows a contrary trend compared to 2D Enclosed flow, where elevation of inlet angle is inversely proportional to the downforce. 
+\noindent On the other hand, the inlet variable shows a contrary trend  to 2D Enclosed flow, where elevation of inlet angle is inversely proportional to the downforce. The flow imposed generate a stagnation pressure on the front body which the point that separate the flow ahead to the top and the undertray. This occurrence slows the velocity flow that enters the inlet region, hence reduce the overall effectiveness of energy conversion. Whereas the 2D enclosed flow has a perfect flow intake without any turbulence disturbance and variable velocity. As it enters inlet angle of 22 degrees, low pressure region at intake is insignificant, however, this occurrence is more clear at the transition between the intake and throat indicated by the blue velocity streamline. This can be further observed on inlet pressure plot on figure \ref{fig:2D_OF_A1_PLOT} Appendix B, it can be seen that there are pressure fluctuation for 6 and 10 degree angle. This indicates the early low pressure region as explained earlier. Moreover, at 22 degrees inlet elevation, immediate pressure drop is indicated by the plot at the transition corner between the inlet and throat region. Moreover,  It can be observed that immediate streamline on figure \ref{fig:A1_Contour_inlet_compare} redirection cause an low pressure gradient which indicated by the empty velocity streamline region 
 
 \begin{figure}[!hb]
    \noindent\makebox[\textwidth]{
-   \includegraphics[width=1\textwidth]{Figures/2D_OF/2D_OF_A1_CONTOUR_INLET_COMPARE.png}}
+   \includegraphics[width=0.9\textwidth]{Figures/2D_OF/2D_OF_A1_CONTOUR_INLET_COMPARE.png}}
    \caption{Comparison of velocity streamline and pressure contour of 6 (left), 10 (middle), and 22(right) degrees inlet angle. }
    \label{fig:A1_Contour_inlet_compare}
 \end{figure}
 
-
 \noindent It was observed that sharp corner may increase the possibility of early separation at some variable and location. Therefore, geometry 3 was fabricated to overcome these problem and investigate further the similar variables. Figure \ref{fig:2D_OF_A4_results} below depicts the plot of variation in lift and drag vs inlet and diffuser angle of geometry 3.
 
-\begin{figure}[h!]
+\begin{figure}[htb!]
     \centering
     \includegraphics[scale=0.6]{Figures/Graph/2D_OF_A4.png}
     \caption{Lift and drag variation vs diffuser and inlet angle of geometry 3.}
     \label{fig:2D_OF_A4_results}
 \end{figure}
 
-Similar trend emerged on the
+\noindent Identical trend can be observed for lift vs diffuser angle for both geometry 2 and 3. A maximum downforce occurred at 5 degrees diffuser angle, followed by linear decrease in downforce. From this analysis alone, a smooth and longer diffuser has shown to delay the flow separation which increase the overall downforce. An increase in drag occurred up to its maximum point at 10 degrees then decrease  subsequently , however, it is worth noting that the scale is small which makes it insignificant. On the other hand, the inlet variable also shows a similar and clear trend due to the smoother intake. It can be seen that lift smoothly increase directly proportional to the inlet angle, and no fluctuations occurred which surmised  an effective flow intake where no disturbance of flow separation on the inlet region. Comparing all geometries analyses, it can be seen from figure \ref{fig:2D_OF_PLOT_COMPARE_ALL} below that overall downforce of geometry 3 at any given angle after 5 degrees are generally lower and the overall drag is too generally higher, however insignificant, compared to the rest of geometries.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.9]{Figures/2D_OF/2D_OF_PLOT_COMPARE_ALL.png}
+    \caption{Lift and drag variation vs diffuser (left) and inlet (right) angle of all geometries.}
+    \label{fig:2D_OF_PLOT_COMPARE_ALL}
+\end{figure}
+
+\noindent Similarly for the inlet angle variable, smoothed inlet angle allows a better flow intake which indicated by the overall downforce and drag of geometry 3 is higher than geometry 1. It is worth noting that 2D Open flow analyses indicates no significant changes in drag for every variables, this is due to the significant drag produced by the flow separation at the rear bluff body itself, contrary to the 2D enclosed flow where drag only produced by the flow underneath. Hence, changes in undertray drag are inconsiderable compared to the bluff body drag.
 
 
 
