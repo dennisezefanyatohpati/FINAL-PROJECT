@@ -3,7 +3,6 @@
 This section will discuss the trend and effect of various undertray variables in 2 dimensions. The variables tested consist of inlet and diffuser angle where the optimised value will be used as a preliminary variable in 3 dimensional undertray design. The 2D analysis will consist of Enclosed flow analysis which use the Venturi-tube like geometry to simulate the flow of the undertray, and open-flow analysis used the bluff body to simulate the flow behaviour as well the interaction between the undertray and the bluff body. 
 
 \subsection{2D Enclosed Flow}
-\subsubsection{Overview}
 2D Enclosed flow analysis serve a purpose in creating fundamental understanding of the undertray flow physics. Diffuser and inlet angle was chosen to be the main variables which fundamentally known to affect the undertray's performance. It is so called 'Enclosed' due to its geometry which shaped like a half venturi meter which cap the flow analysis to only the lower part of the undertray without considering any surrounding flow ahead and behind the car it self.  %try to reference every paper which have the diffuser and inlet analysis %also reference the FSUK rules
 
 \subsubsection{Geometry and Mesh Generation}
@@ -44,7 +43,7 @@ Results of this analysis will be discussed on the basis of how changes in outlet
 
 \noindent From \textbf{figure \ref{fig:wall_shear_plot_2D_EN} left} in \textbf{Appendix A} ,  it can be observed that flow detachment occurred at an identical point of the undertray at any given diffuser angle which indicated by a similar pattern of second peak on the graph. Moreover,  flow detachment also occurred due to the adverse pressure gradient which is indicated on the second lower peak on the static pressure plot in figure \ref{fig:pressure_plot_2D_EN} \textbf{Appendix A}.
 
-\noindent On the other hand, the inlet angle variable has a contrary result than previous variable. \textbf{Figure \ref{fig:2D_EN_result}} right shows that the lift  is inversely proportional to the drag as the inlet angle increases.  As the cross section area on the inlet nozzle converging, the flow is forced to convert the pressure energy into kinetic energy indicated by the increase its velocity which then drops the pressure in the undertray's throat. This condition creates a lower pressure region on the undertray's throat, hence increasing the downforce.This phenomena obeys the Bernoulli formula\textbf{ (equation \ref{eq:bernoulli})} where pressure and cross-sectional area is inversely proportional to the flow's velocity, assuming the flow in the inlet region are steady and incompressible.  Elevation in inlet angle also provide more tangential surface to be imposed by the incoming flow, this create a higher shear stress on the inlet wall and increase the overall drag. This condition also indicated on the first peak of the wall shear on figure \ref{fig:wall_shear_plot_2D_EN} left which shows a significant increase in shear stress at the corner between inlet and throat region.
+\noindent On the other hand, the inlet angle variable has a contrary result than previous variable. \textbf{Figure \ref{fig:2D_EN_result}} right shows that the lift  is inversely proportional to the drag as the inlet angle increases.  As the cross section area on the inlet nozzle converging, the flow is forced to convert the pressure energy into kinetic energy indicated by the increase its velocity which then drops the pressure in the undertray's throat. This condition creates a lower pressure region on the undertray's throat, hence increasing the downforce.This phenomena obeys the Bernoulli equation \textbf{ (equation \ref{eq:bernoulli})} where pressure and cross-sectional area is inversely proportional to the flow's velocity, assuming the flow in the inlet region are steady and incompressible.  Elevation in inlet angle also provide more tangential surface to be imposed by the incoming flow, this create a higher shear stress on the inlet wall and increase the overall drag. This condition also indicated on the first peak of the wall shear on figure \ref{fig:wall_shear_plot_2D_EN} left which shows a significant increase in shear stress at the corner between inlet and throat region.
 
 \noindent Further analysis of wall shear stress \textbf{(figure \ref{fig:wall_shear_plot_2D_EN} right)} and static pressure \textbf{(figure \ref{fig:pressure_plot_2D_EN} right)} plot for inlet angle variables in \textbf{Appendix A} shows a general increase in shear stress with inlet angle elevation accompanied by the overall pressure drop as the angle increases. This explains increase in total downforce with the elevation of inlet angle.
 
@@ -54,7 +53,6 @@ Results of this analysis will be discussed on the basis of how changes in outlet
 
 
 \subsection{2D Open-Flow}
-\subsubsection{Overview}
 Previous analysis provides fundamental understanding of how changes in inlet and diffuser angle may affect its overall performance and it solely focused on the internal flow of the undertray without taking an account of the flow surrounding it. This section will be an extension of the previous analysis which to understand the effect of similar variable with additional bluff body added to the geometry. 
 
 \subsubsection{Geometry and Mesh Generation}
@@ -73,8 +71,6 @@ This section will utilise multiple type of bluff body will be used to simulate t
 
 \noindent A hybrid mesh was generated for this analysis. This consist of unstructured triangular and quadrilateral mesh (or inflation) near the bluff body and the floor to identify the effect of boundary layer interaction between the undertray and floor wall.  Detailed graphics of 2D open-flow mesh can be seen on \textbf{figure \ref{fig:2D_OF_MESH}} in \textbf{Appendix B}.
 %add details average of the mesh quality criterion (mesh number, AR, skewness, quality)
-
-
 
 \subsubsection{Results \& Discussion}
 
