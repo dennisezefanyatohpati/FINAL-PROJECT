@@ -10,16 +10,15 @@
 
 \usepackage{ragged2e}
 \usepackage{subcaption}
-
 \onehalfspacing %SPACING CONFIGURATION
 
 \usepackage{graphicx}
 \graphicspath{ {./Figures/images/} }
 \usepackage{pdfpages}
 
-\usepackage[sorting=none]{biblatex}
+\usepackage[backend=biber,
+  bibencoding=utf8, style=ieee, sorting=none]{biblatex}
 \addbibresource{references.bib}
-
 
 \usepackage{epigraph}
 \usepackage{mathtools}
@@ -100,12 +99,16 @@
 \input{Content/appendixes/appendix_a}
 
 \input{Content/appendixes/appendix_b}
-\newpage
+
 \input{Content/appendixes/appendix_c}
 
-%\input{Content/appendixes/appendix_d}
+\input{Content/appendixes/appendix_d}
 
-%\input{Content/appendixes/appendix_x}
+\input{Content/appendixes/appendix_e}
+
+\input{Content/appendixes/appendix_f}
+
+\input{Content/appendixes/appendix_g}
 
 \end{document}
 
