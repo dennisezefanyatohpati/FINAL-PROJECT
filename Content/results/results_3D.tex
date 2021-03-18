@@ -1,4 +1,3 @@
-\newpage
 \section{3 Dimensional Analysis}
 \noindent This section is an extended analysis of the 2-dimensional analyses intended to explore and analyse the 3-dimensional flow feature. It was surmised that the 3-dimensional flow offers a complex flow behaviour that may significantly affect an undertray's overall performance. This part of the paper will be divided into 3D open-flow and undertray prototype with bluff body analyses.
 
@@ -41,29 +40,41 @@ Due to the nature of the mesh, k-$\omega$ SST model was used throughout this ana
 \begin{figure}[!htb]
     \centering
     \noindent\makebox[\textwidth]{
-    \includegraphics[width=0.9\textwidth]{Figures/3D_OF/3D_OF_VECTOR_SUCTION.png}}
+    \includegraphics[width=0.8\textwidth]{Figures/3D_OF/3D_OF_VECTOR_SUCTION.png}}
     \caption{Vector diagram of velocity flow on the undertray's cross-section indicating flow suction from the side of the body.}
     \label{fig:Vector_suction_diagram}
 \end{figure}
 
-\noindent Comparing the lift and drag for diffuser variable with or without inlet angle; the graph exhibit an identical result except at 0 degrees.  There is a noticeable drop in downforce and drag (however insignificant), which plausibly due to the diffuser's absence. A well-designed diffuser is important to slowly expand the flow and allows the jet flow to stay attached to the diffuser. Moreover, diffusers side skirts' presence allows the the generation of corner vortices that help the flow to attached, hence increasing the overall downforce.  ANSYS Post CFD allows the visualisation of Q-Criterion which shows a vortex region ($Q > 0$) where anti-symmetric component of vorticity tensor is more dominating than the symmetric \cite{Holmen2012MethodsIdentification}. The corner vortex allows the flow from the undertray's throat to stick on the wall which slows the pressure expansion hence reduction in lift and drag. This phenomenon can be seen on \textbf{figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR}} where the the region where vortex is present has a higher wall shear than its surrounding which indicates flow attachment in the respective direction. 
-
+\noindent The inlet angle elevation was simulated with 10 degrees diffuser angle. It can be examined that the effect of inlet angle elevation shows significant difference to the 2 dimensional analyses. Lift and drag of the bluff body reach its minimum at 5 degrees which then followed by lift and drag rise up to 20 degrees. As discussed in earlier section, stagnation point in the forepart of bluff body in 2 dimensional simulation creates separation point of flow direction to the top and bottom. However, in 3 dimensional case, the stagnation point separates the flow without consistent direction which create more complex flow features in the inlet region. An identical front cross-section of the car was made on the fore-flow of the body which became the initial location of streamline. Figure \textbf{\ref{fig:3D_OF_INLET_COMPARE} left} shows the streamline separation from the free flow to the surrounding body. Moreover, some of the streamline flow are leaked to the side, creating a trailing corner vortex \textbf{(middle)} hence reducing the intake acceleration in the undertray.  Compared to the 2 dimensional analysis, the flow that goes to the undertray stays without leaking or generate trailing vortex, which make the flow intake better, hence higher downforce. This explains the downforce degradation after 5 degrees, as the inlet angle increases, more airflow are leaking on the inlet region and creating bigger trailing vortex. Increase in drag comes from the skin friction as the flow is imposed by larger area with elevation of angle, and the trailing vortex which plausibly affect the flow on the throat (as discussed previously). It is worth noting that the changes of drag with inlet angle elevation is not significant and can be ignored, hence it was not used in  bluff body geometry with fences.
 
 \begin{figure}[!htb]
     \centering
     \noindent\makebox[\textwidth]{
-    \includegraphics[width=0.7\textwidth]{Figures/3D_OF/3D_OF_COMPARE_FENCES.png}}
-    \caption{Comparison of x-wall shear and vortex (Q-criterion) generated on the diffuser region with (left) and without (right) fences applied.}
-    \label{fig:3D_OF_COMPARE_FENCES_SHEAR}
+    \includegraphics[width=1\textwidth]{Figures/3D_OF/3D_OF_INLET_COMPARE.png}}
+    \caption{Fore-flow streamline imposing the bluff-body and occurrence of leaking indicated by the trailing vortex ($Q$-criterion isosurface) at the inlet region (left and middle), and velocity vector of the flow indicating flow leaks at the inlet region (right).} 
+    \label{fig:3D_OF_INLET_COMPARE}
 \end{figure}
 
-\noindent The next analysis will include fences (a vertical partition on a diffuser) to generate corner vortices and investigate its effect on the undertray's performance. The lift and drag plot on figure \ref{fig:3D_OF_PLOT_COMPARE_ALL} exhibit an overall higher downforce compared to the bluff body without the fences. Similar  concept of vortex generation applies; as the fences installed, there are more vortex generated along the diffuser. This condition creates less flow separation in the x direction, maintaining flow attachment, and increases the downforce. Figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR} illustrates the presence of more vortices generated inside the diffuser with additional fences, and smaller flow separation region indicated by non zero x-wall shear region.
+\noindent Comparing the lift and drag for diffuser variable with or without inlet angle; the graph exhibit an identical result except at 0 degrees.  There is a noticeable drop in downforce and drag (however insignificant), which plausibly due to the diffuser's absence. A well-designed diffuser is important to slowly expand the flow and allows the jet flow to stay attached to the diffuser. Moreover, diffusers side skirts' presence allows the the generation of corner vortices that help the flow to attached, hence increasing the overall downforce.  ANSYS Post CFD allows the visualisation of Q-Criterion which shows a vortex region ($Q > 0$) where anti-symmetric component of vorticity tensor is more dominating than the symmetric \cite{Holmen2012MethodsIdentification}. The corner vortex allows the boundary layer to stick on the wall which slows the pressure expansion hence reduction in lift and drag. This phenomenon can be seen on \textbf{figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR}} where the the region where vortex is present has a higher wall shear than its surrounding which indicates flow attachment in the respective direction.
 
+\begin{figure}[!htb]
+    \centering
+    \noindent\makebox[\textwidth]{
+    \includegraphics[width=0.65\textwidth]{Figures/3D_OF/3D_OF_COMPARE_FENCES.png}}
+    \caption{Comparison of x-wall shear and vortex velocity (Q-criterion isosurface) generated on the diffuser region with (left) and without (right) fences applied.}
+      \label{fig:3D_OF_COMPARE_FENCES_SHEAR}
+\end{figure}
+
+\noindent The next analysis will include fences (a vertical partition on a diffuser) to generate corner vortices and investigate its effect on the undertray's performance. The lift and drag plot on figure \ref{fig:3D_OF_PLOT_COMPARE_ALL} exhibit an overall higher downforce compared to the bluff body without the fences. Similar concept of vortex generation applies; as the fences installed, there are more vortex generated along the diffuser. This condition creates less flow separation in the x direction (flow direction), maintaining flow attachment, and increases the downforce. Figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR} illustrates the presence of more vortices generated inside the diffuser with additional fences, and smaller flow separation region indicated by non zero x-wall shear region. 
+
+%TALK ABOUT SYMMETRY LIMITATION
 
 \subsection{3D Undertray}
 Overall previous analyses have given a fundamental understanding of flow behaviour, features, and performance trends of an underbody flow. This section of the report will utilise prior simulations to design several undertray prototypes that will be simulated using traced bluff-body of QFR car to achieve a sensible picture of the flow in real-life circumstances. The results documented then analysed thoroughly.
 
 \subsubsection{Geometry and Mesh Generation}
+
+
 \subsubsection{Results and Discussion}
 
 

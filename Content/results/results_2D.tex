@@ -46,6 +46,8 @@ These analyses will be discussed based on how changes in outlet and inlet angle 
 
 \noindent Further analysis of wall shear stress \textbf{(figure \ref{fig:wall_shear_plot_2D_EN} right)} and static pressure \textbf{(figure \ref{fig:pressure_plot_2D_EN} right)} plot for inlet angle variables in \textbf{Appendix A} shows a general increase in shear stress with inlet angle elevation accompanied by the overall pressure drop as the angle increases. This explains the increase in total downforce with the elevation of the inlet angle.
 
+\noindent There are some limitations in this analysis. First, the flow analysis only includes the underpart of the undertray which made this analysis geometrically ideal as the intake and outlet flow acceleration and deceleration are efficient. Without taking consideration of the flow from its surrounding, a linear trend could easily be achieved as stated. This analysis cannot be a benchmark results for the undertray prototype design, however flow understanding of flow behaviour in a duct was obtained.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 2D OPEN FLOW ANALYSIS %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +57,7 @@ These analyses will be discussed based on how changes in outlet and inlet angle 
 The previous analysis provides a fundamental understanding of how changes in inlet and diffuser angle may affect its overall performance and solely focus on the internal flow of the undertray without taking account of the flow surrounding it. This section will be an extension of the previous analysis to understand the effect of a similar variable with an additional bluff body added to the geometry. 
 
 \subsubsection{Geometry and Mesh Generation}
-This section will utilise multiple types of bluff bodies to simulate the flow behaviour around the body and how it will affect an undertray's general performance. Four different geometries were built on a generative decision which each serve its own purpose in this analysis. A rough calculation of the QFR car's length was too initiated. Geometry 1 \& 2 has 2.6 meters of undertray length with a similar inlet and diffuser configuration as previous analysis. However, Geometry 3 has a slightly different undertray configuration, with 2.85 meters of length, 1-meter smooth rounded diffuser, and 0.25 meters of inlet angle. Worth noting that the code 'A' stands for 'analysis', which corresponds to the type of geometry used in the discussions and figures.
+This section will utilise multiple types of bluff bodies to simulate the flow behaviour around the body and how it will affect an undertray's general performance. Four different geometries were built on a generative decision which each serve its own purpose in this analysis. A rough calculation of the QFR car's length was too initiated. Geometry 1 \& 2 have 2.6 meters of undertray length with a similar inlet and diffuser configuration as previous analysis. However, Geometry 3 has a slightly different undertray configuration, with 2.85 meters of length, 1-meter smooth rounded diffuser, and 0.25 meters of inlet angle. Worth noting that the code 'A' stands for 'analysis', which corresponds to the type of geometry used in the discussions and figures.
 
 \begin{figure}[!ht]
     \centering
@@ -122,6 +124,8 @@ This section will utilise multiple types of bluff bodies to simulate the flow be
 \end{figure}
 
 \noindent Similarly for the inlet angle variable, smoothed inlet angle allows a better flow intake which indicated by the overall downforce and drag of geometry 3 is higher than geometry 1. It is worth noting that 2D Open flow analyses indicate no significant drag changes for every variable; this is due to the significant drag produced by the flow separation at the rear bluff body itself, contrary to the 2D enclosed flow where drag only produced by the flow underneath. Hence, changes in undertray drag are inconsiderable compared to the bluff body drag.
+
+\noindent 2D Open-flow analysis was done to overcome the limitations from enclosed flow. A body was added to understand the undertray's flow under the effect of its surroundings and a significant trend was achieved. However, there are some flow features such as corner vortices on the diffuser which were not captured which  will be resolved in the next section.
 
 
 
