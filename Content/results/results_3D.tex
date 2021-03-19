@@ -75,15 +75,27 @@ Overall previous analyses have given a fundamental understanding of flow behavio
 \subsubsection{Geometry and Mesh Generation}
 \noindent Previous results have given knowledge on undertray's trend and flow behaviour for inlet and diffuser angle. Eight prototype designs were made based on interpretation and judgement from prior results. Number of configurations were used to achieve the best results in the designs, including; side diffuser, side flat-plate, dual-variable diffuser, Gurney flaps, and variable vortex generator. Those variables were designed to achieve the maximum performance of an undertray. All eight undertray prototype geometries can be seen on figure \ref{fig:UTP_D} in Appendix D.
 
-\noindent The geometry then  vv 
+\noindent Previous paper by McClune \cite{McClune2018DesignCar} have analysed several undertray designs. However, the simulation was solely include the undertray, hence, unnecessary velocity and pressure built up on the top of the undertray. To overcome this issue, real car traced bluff-body was developed to simulate the flow of real QFR car. Nonetheless, there are more aspects, such as, suspension and tyre which may disturb or pre-sculpt the forefront flow prior entering the side undertray. Figures \ref{fig:3D_UT_BB_SIMPLIFICATION} shows QFR car simplification into a bluff body which fits the undertray design.
 
 \begin{figure}[!htb] %BODY SIMPLIFICATION DIAGRAM
     \centering
     \noindent\makebox[\textwidth]{
-    \includegraphics[width=0.7\textwidth]{Figures/UTP_FIGS/UT_BB_SIMPLIFY.png}}
+    \includegraphics[width=0.8\textwidth]{Figures/UTP_FIGS/UT_BB_SIMPLIFY.png}}
     \caption{Simplification of QFR car as an undertray's Bluff Body to simulate realistic flow around the body.}
       \label{fig:3D_UT_BB_SIMPLIFICATION}
 \end{figure}
+
+ \noindent Fluid-flow then generated using Design Modeller. An partial model enclosed fluid-flow region was made with dimensions of 8 meters behind, 4 meters forward, and 1.5 meters height and thickness. To capture flow feature in the undertray and bluff-body region, two Body of Influence (BOI) were incorporated. A bigger BOI with dimensions of 5 $\times$ 1.2 $\times$ 1.2 meters was generated to capture the flow surrounding the bluff body, and additional smaller BOI on the undertray region used 3 $\times$ 0.25 $\times$ 0.7 meters of dimension. The enclosed fluid flow generated can be seen on \textbf{figure \ref{fig:UTP_Fluid_flow} in Appendix D}
+
+\noindent A hybrid mesh then was generated with the same configurations for all geometries.
+
+\begin{figure}[!htb] %BODY SIMPLIFICATION DIAGRAM
+    \centering
+    \noindent\makebox[\textwidth]{
+    \includegraphics[width=1\textwidth]{Figures/UTP_FIGS/3D_UT_BB_MESH_COMPILE.png}}
+    \caption{3D Hybrid Mesh Generated for undertray prototype design with bluff-body.}\label{fig:3D_UT_MESH}
+\end{figure}
+
 \subsubsection{Results and Discussion}
 
 
