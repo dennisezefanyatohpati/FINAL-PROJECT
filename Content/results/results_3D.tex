@@ -1,31 +1,26 @@
-\section{3 Dimensional Analysis}
-\noindent This section is an extended analysis of the 2-dimensional analyses intended to explore and analyse the 3-dimensional flow feature. It was surmised that the 3-dimensional flow offers a complex flow behaviour that may significantly affect an undertray's overall performance. This part of the paper will be divided into 3D open-flow and undertray prototype with bluff body analyses.
+\section{Three Dimensional Analysis}
+\noindent This section extends the analysis of the two dimensional approach, and is intended to explore and analyse the  three dimensional flow features. It was surmised that three dimensional flow allows for more complex flow behaviour, that may significantly affect an undertray's overall performance. This part of the report will be divided into 3D open flow, and undertray prototype with bluff body analyses.
 
+\subsection{3D Open Flow}
+This analysis is an extension to three dimensions of the 2D open flow cases. The purpose of this analysis to investigate further the flow features that develop in an undertray in a three dimensional manner, which might plausibly affect its performance.
 
-\subsection{3D Open-Flow}
-This analysis is an extension of the 3-dimensional analysis of 2D open-flow. The purpose of this analysis to investigate further the flow features of an undertray in a 3-dimensional manner, which plausibly affect its performance based on a similar variable as previous analyses.
-
-\subsubsection{Geometry and Mesh generation}
-An identical 2D sketch from geometry 3 - 2D open flow was used, which then extruded to 1 meter of thickness with a skirt on both side of the rear diffuser. The skirts were used to improve flow isolation and generate corner vortices which help to improve flow attachment at the diffuser region. Fences were also added to the next analyses to investigate the effect of vortex generator respective to the downforce generation. Geometry sketch can be seen in figure \ref{fig:3D_OF_GEOM} below. 
+\subsubsection{Geometry and Mesh Generation}
+An identical 2D sketch from geometry 3 of the 2D open flow section was used, which then extruded to a car-realistic 1 meter thickness. A skirt was added to both sides of the rear diffuser. These skirts were used to improve flow isolation and to generate corner vortices, which help to improve flow attachment within the diffuser region. Fences were also added to later analyses to investigate the effects of vortex generators with respect to the generation of downforce. A sketch of the geometry can be seen in Figure~\ref{fig:3D_OF_GEOM} below. 
 
 \begin{figure}[!h]
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.8\textwidth]{Figures/3D_OF/3D_OF_D.PNG}}
-    \caption{Geometry generated for 3D open-flow analysis.}
+    \caption{Geometry generated for 3D open flow analysis.}
     \label{fig:3D_OF_GEOM}
 \end{figure}
 
-\noindent The geometry then was imported to the design modeller where fluid domain and body of influence were made. The fluid flow was made 12 meters behind, 5 meters forward, 2 meters top, 0.03 meters bottom, and 1.5 meters wide. Due to the body's symmetry, a partial model was used to create a fluid domain to compress the mesh number. Body of influence (BOI) with a dimension of  6 $\times$1 $\times$ 7 meters were created using box feature around the body to improve the mesh quality and capture the surrounding flow features.  
+\noindent The CAD geometry was then imported into DesignModeler, where the fluid domain and body of influence were built. The fluid domain was made 12 meters behind, 5 meters forward, 2 meters top, 0.03 meters bottom, and 1.5 meters wide. Due to the symmetry of the body, a half model was used for the fluid domain to minimise the mesh element count. A body of influence (BOI), with dimensions of  $6 \times 1 \times 7$ meters was created using a box feature around the body to increase the mesh density and capture the surrounding flow features.  
 
-\noindent A hybrid mesh was used, which comprises a tetrahedron and triangular prisms; therefore, construct 20 inflation layer of triangular prism near the wall with y$^+$=1.  Mesh element size of 0.8 meters and 0.02 meters of BOI generated 1.3 to 1.5 million mesh elements for this analysis. This section's mesh quality is considerably acceptable with average skewness of 1.9 and an aspect ratio of 80-90; however, an extreme jump size in the cell between the inflation layer and far-field fluid domain  is considered not ideal. Detailed illustration of the fluid domain and the mesh can be seen in figure \ref{fig:3D_OF_MESH} Appendix C.
-
-
-
-
+\noindent A hybrid mesh was used, which is comprised of tetrahedrons and triangular prisms. Twenty inflation layers of triangular prism were applied near the wall to give a $y^+=1$. A max element size of 0.8 meters and 0.02 meters in the BOI generated a mesh with 1.3 to 1.5 elements for this analysis. This section's mesh quality is considered acceptable, with an average skewness of 1.9 and an aspect ratio of 80-90; however, a significant jump in size in the cells between the inflation layer and far-field fluid domain is considered not ideal. Detailed illustration of the fluid domain and the mesh can be seen in Figure~\ref{fig:3D_OF_MESH} Appendix C.
 
 \subsubsection{Results and Discussions}
-Due to the nature of the mesh, k-$\omega$ SST model was used throughout this analysis to take advantage of the feature of this transport model \cite{Ansys2006ModelingFlows}. Analyses will be grouped into three geometries: diffuser angle variables with no inlet angle, diffuser variables with 10 degrees inlet angle, inlet angle variable with 10 degrees diffuser angle, and variable diffuser angle with three fences applied.  Figure \ref{fig:3D_OF_PLOT_COMPARE_ALL} below shows the comparison of lift and drag between all variables.
+Due to the nature of the mesh, the $k-\omega$ SST model was used throughout this analysis to take advantage of the features of this particular transport model \cite{Ansys2006ModelingFlows}. The analyses will be grouped into four sets of geometries: varying diffuser angle with no inlet angle, varying diffuser angles with an inlet angle of 10 degrees, varying inlet angle with 10 degrees diffuser angle, and variable diffuser angle with three fences applied. Figure~\ref{fig:3D_OF_PLOT_COMPARE_ALL} below shows the comparison of lift and drag between all the variables.
 
 \begin{figure}[htb!]
     \centering
@@ -35,7 +30,7 @@ Due to the nature of the mesh, k-$\omega$ SST model was used throughout this ana
     \label{fig:3D_OF_PLOT_COMPARE_ALL}
 \end{figure}
 
-\noindent The value of lift and drag showed a representation of half bluff body as computed. Once more, a similar trend emerged compared to 2D open flow geometry 3 means the 2D bluff body, in this case can be deduced as the representation of the 3D analysis.  The trend shows an increase in downforce at a 5 degrees diffuser angle, followed by linear downforce reduction up to 20 degrees.  In comparison with 2D open-flow analysis, the average downforce of this analysis is significantly lower. This is due to the nature of the analysis that allows the accelerated flow in the undertray to be affected by the flow surrounding the body compared to the 2D open-flow, where the flow on the undertray is solely affected by the flow. This cause the lower pressure region in the undertray to suck in the air from the surrounding,  reducing the effectiveness of the flow acceleration underneath, hence lower downforce. This phenomenon is illustrated in figure \ref{fig:Vector_suction_diagram} below with influence of corner vortex occurred from the forepart of bluff body. 
+\noindent The values of lift and drag as computed represent the values for the half body. Once more, a similar trend emerged as with the 2D open flow geometry 3. The trend shows an increase in downforce at a 5 degrees diffuser angle, followed by the downforce falling linearly up to 20 degrees. In comparison with 2D open flow analysis, the average downforce of this analysis is significantly lower. This is due to the nature of the analysis which allows the accelerated flow in the undertray to be affected by the flow surrounding the body. This is in contrast to the 2D open-flow, in which the flow past the undertray is constrained to move solely in plane. In three dimensions, the lower pressure region in the undertray sucks in the air from the surroundings, reducing the effectiveness of the flow acceleration underneath, resulting in a lower downforce. This phenomenon is illustrated in Figure~\ref{fig:Vector_suction_diagram} below, with the influence of the corner vortices occurring from the fore of the bluff body. 
 
 \begin{figure}[!htb]
     \centering
@@ -55,17 +50,17 @@ Due to the nature of the mesh, k-$\omega$ SST model was used throughout this ana
     \label{fig:3D_OF_INLET_COMPARE}
 \end{figure}
 
-\noindent Comparing the lift and drag for diffuser variable with or without inlet angle; the graph exhibit an identical result except at 0 degrees.  There is a noticeable drop in downforce and drag (however insignificant), which plausibly due to the diffuser's absence. A well-designed diffuser is important to slowly expand the flow and allows the jet flow to stay attached to the diffuser. Moreover, diffusers side skirts' presence allows the the generation of corner vortices that help the flow to attached, hence increasing the overall downforce.  ANSYS Post CFD allows the visualisation of Q-Criterion which shows a vortex region ($Q > 0$) where anti-symmetric component of vorticity tensor is more dominating than the symmetric \cite{Holmen2012MethodsIdentification}. The corner vortex allows the boundary layer to stick on the wall which slows the pressure expansion hence reduction in lift and drag. This phenomenon can be seen on \textbf{figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR}} where the the region where vortex is present has a higher wall shear than its surrounding which indicates flow attachment in the respective direction.
+\noindent Comparing the lift and drag with the diffuser varying with or without an inlet angle, the graphs exhibit an identical results except at 0 degrees. Here, there is a noticeable drop in downforce and drag, which is plausibly due to the diffuser's absence. A well-designed diffuser is important because it slowly expands the flow and allows the jet to stay attached to the undertray surface. Moreover, the side skirts in the diffuser allows the generation of corner vortices that help the flow to remain attached still further, hence increasing the overall downforce. ANSYS Post CFD allows the visualisation of $Q$-Criterion isosurfaces, which marks a vortex region ($Q > 0$) as where the anti-symmetric component of velocity gradient tensor is more dominating than the symmetric \cite{Holmen2012MethodsIdentification}. The corner vortex allows the boundary layer to stick on to the wall, slowing the pressure expansion hence the reduction in lift and drag. This phenomenon can be seen on Figure~\ref{fig:3D_OF_COMPARE_FENCES_SHEAR}, where the region in which the vortex is present has a higher wall shear stress than its surroundings, indicating flow attachment in the respective direction.
 
 \begin{figure}[!htb]
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.65\textwidth]{Figures/3D_OF/3D_OF_COMPARE_FENCES.png}}
-    \caption{Comparison of x-wall shear and vortex velocity (Q-criterion isosurface) generated on the diffuser region with (left) and without (right) fences applied.}
+    \caption{Comparison of x-wall shear and vortex velocity ($Q$-criterion isosurface) generated on the diffuser region with (left) and without (right) fences applied.}
       \label{fig:3D_OF_COMPARE_FENCES_SHEAR}
 \end{figure}
 
-\noindent The next analysis will include fences (a vertical partition on a diffuser) to generate corner vortices and investigate its effect on the undertray's performance. The lift and drag plot on figure \ref{fig:3D_OF_PLOT_COMPARE_ALL} exhibit an overall higher downforce compared to the bluff body without the fences. Similar concept of vortex generation applies; as the fences installed, there are more vortex generated along the diffuser. This condition creates less flow separation in the x direction (flow direction), maintaining flow attachment, and increases the downforce. Figure \ref{fig:3D_OF_COMPARE_FENCES_SHEAR} illustrates the presence of more vortices generated inside the diffuser with additional fences, and smaller flow separation region indicated by non zero x-wall shear region. 
+\noindent The next analysis incorporates fences (vertical partitions on the diffuser) to generate corner vortices to investigate their effects on the undertray's performance. The lift and drag plots shown in Figure~\ref{fig:3D_OF_PLOT_COMPARE_ALL} demonstrate an overall higher downforce compared to the bluff body without the fences. A similar concept of vortex generation applies. With the fences installed, there are more vortices generated along the diffuser. This reduces the flow separation in the x direction (flow direction), and maintains flow attachment, thus increasing the downforce. Figure~\ref{fig:3D_OF_COMPARE_FENCES_SHEAR} illustrates the presence of the extra vortices generated inside the diffuser by additional fences, and the smaller flow separation region indicated by non zero x-wall shear region. 
 
 %TALK ABOUT SYMMETRY LIMITATION
 
@@ -73,11 +68,11 @@ Due to the nature of the mesh, k-$\omega$ SST model was used throughout this ana
 Overall previous analyses have given a fundamental understanding of flow behaviour, features, and performance trends of an underbody flow. This section of the report will utilise prior simulations to design several undertray prototypes that will be simulated using traced bluff-body of QFR car to achieve a sensible picture of the flow in real-life circumstances. The results documented then analysed thoroughly.
 
 \subsubsection{Geometry and Mesh Generation}
-\noindent Previous results have given knowledge on undertray's trend and flow behaviour for inlet and diffuser angle. Eight prototype designs were made based on interpretation and judgement from prior results. Number of configurations were used to achieve the best results in the designs, including; side diffuser, side flat-plate, dual-variable diffuser, Gurney flaps, and variable vortex generator. Those variables were designed to achieve the maximum performance of an undertray. All eight undertray prototype geometries can be seen on figure \ref{fig:UTP_D} in Appendix D.
+\noindent Previous results have developed the knowledge of the trends in flow behaviour for the undertray's inlet and diffuser angles. Eight prototype designs were made based on interpreting these results and some engineering judgement from prior results. A number of configurations were used to achieve the best results in the designs, including: side diffuser; side flat plate; dual variable diffuser; Gurney flaps; and variable vortex generators. These variables were all aimed at achieving the maximum performance of the undertray. All eight undertray prototype geometries can be seen in Figure~\ref{fig:UTP_D} in Appendix D.
 
-\noindent Previous paper by McClune \cite{McClune2018DesignCar} have analysed several undertray designs. However, the simulation was solely include the undertray, hence, unnecessary velocity and pressure built up on the top of the undertray. To overcome this issue, real car traced bluff-body was developed to simulate the flow of real QFR car. Nonetheless, there are more aspects, such as, suspension and tyre which may disturb or pre-sculpt the forefront flow prior entering the side undertray. Figures \ref{fig:3D_UT_BB_SIMPLIFICATION} shows QFR car simplification into a bluff body which fits the undertray design.
+\noindent An earlier project by McClune \cite{McClune2018DesignCar} analysed several undertray designs. However, the simulations undertaken consisted solely of the undertray, hence, unrealistic velocity and pressure fields were developed up on the top of the undertray. To overcome this issue in this project, bluff body traced from the real car was developed to approximate the flow over the real QFR 2021 car. Nonetheless, a number of simplifications were made for ease and computational performance, such as the suspension and tyres, which may disturb or pre-sculpt the oncoming flow prior to its entering the side undertray. Figure~\ref{fig:3D_UT_BB_SIMPLIFICATION} shows the QFR car simplification into a bluff body which fits above the undertray design.
 
-\begin{figure}[!htb] %BODY SIMPLIFICATION DIAGRAM
+\begin{figure}[!htb] 
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.8\textwidth]{Figures/UTP_FIGS/UT_BB_SIMPLIFY.png}}
@@ -86,18 +81,58 @@ Overall previous analyses have given a fundamental understanding of flow behavio
 \end{figure}
 
  \noindent Fluid-flow then generated using Design Modeller. An partial model enclosed fluid-flow region was made with dimensions of 8 meters behind, 4 meters forward, and 1.5 meters height and thickness. To capture flow feature in the undertray and bluff-body region, two Body of Influence (BOI) were incorporated. A bigger BOI with dimensions of 5 $\times$ 1.2 $\times$ 1.2 meters was generated to capture the flow surrounding the bluff body, and additional smaller BOI on the undertray region used 3 $\times$ 0.25 $\times$ 0.7 meters of dimension. The enclosed fluid flow generated can be seen on \textbf{figure \ref{fig:UTP_Fluid_flow} in Appendix D}
-
-\noindent A hybrid mesh then was generated with the same configurations for all geometries.
-
-\begin{figure}[!htb] %BODY SIMPLIFICATION DIAGRAM
+ 
+ \begin{figure}[!htb] 
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=1\textwidth]{Figures/UTP_FIGS/3D_UT_BB_MESH_COMPILE.png}}
-    \caption{3D Hybrid Mesh Generated for undertray prototype design with bluff-body.}\label{fig:3D_UT_MESH}
+    \caption{3D hybrid mesh generated for undertray prototype design with bluff body.}\label{fig:3D_UT_MESH}
 \end{figure}
 
-\subsubsection{Results and Discussion}
+\noindent A hybrid mesh for 3D Undertray Prototype design is shown in figure \ref{fig:3D_UT_MESH} above. To capture details on the undertray region, 2 BOI were used on both car's surroundings and undertray area. The first BOI used 0.05 meters of sizing and 0.008 for the second BOI near the undertray region with cell growth rate of 1.1. Similarly to other analyses, inflation layers were used on the moving-floor and bluff body. $y^+$ = 1 was used near the body, with configurations of 8 inflation layer, first cell height of 0.00115 meters, and 1.1 cell growth rate. However, to reduce the jump cell size on the far field and still capture the boundary layer in the undertray region, smooth transition inflation layer was used on the floor region. smooth transition of 0.272 (default) with 5 inflation later and 1.1 cell growth rate were used. In results, around 9.5 to 9.8 millions elements were generated with average element quality of 0.785, skewness of 0.206, and aspect ratio of 2.399 which put the overall quality of the mesh in very good region \cite{Ansys2006ModelingFlows}.   
 
+\subsubsection{Results and Discussion}
+\textbf{Table \ref{UTB_RESULTS}} below shows the table of eight undertray simulation results to compare with similar simulation environment and settings. The bluff body alone was also simulated to be the base comparison to the one with the undertray attached. It is worth noting that UTP stands for Undertray Prototype as a name simplifications in file and simulations.
+
+
+\begin{table}[!htb]
+\caption{Simulation Results of Undertray Prototype Designs.}\label{UTB_RESULTS}
+\begin{tabularx}{0.95\textwidth}{ 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X |
+  }
+\hline
+\multirow{2}{*}{Design Name} & \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax\centering}X|}{Full Body Results}  & \multirow{2}{*}{L/D Ratio} & \multicolumn{2}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax\centering}X|}{Aerodynamics Improvements} \\ \cline{2-3} \cline{5-6}
+ & Lift (N) & Drag (N) & & Lift (N) & Drag (N) \\
+\hline
+
+Bluff Body (Baseline)& -38.48 & 78.72 & -0.49 & 0 & 0\\
+\hline
+UTP1 & -106.26 & 59.81 & -1.78 & -67.79 & -18.91\\
+\hline
+UTP2 & -222.59 & 68.23 & -3.26 & -184.12 & -10.49\\
+\hline
+UTP3 & -108.40 & 67.15 & -1.61 & -69.92 & -11.57\\
+\hline
+UTP4 & -136.75 & 72.60 & -1.88 & -98.28 & -6.12\\
+\hline
+UTP5 & -225.83 & 80.50 & -2.81 & -187.36 & 1.78\\
+\hline
+UTP6 & -224.23 & 81.00 & -2.77 & -185.76 & 2.28\\
+\hline
+UTP7 & -226.52 & 79.77 & -2.84 & -188.05 & 1.05\\
+\hline \hline
+UTP2 at 20 km/h & -26.06 & 7.77 & -3.35 & N/A & N/A\\
+\hline
+UTP2 at 100 km/h & -711.31 & 197.74 & -3.60 & N/A & N/A\\
+\hline
+\end{tabularx}
+
+\end{table}
 
 
 
