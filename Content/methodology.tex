@@ -50,44 +50,52 @@ The SST model is another two equation-model. It combines both the $k-\epsilon$ a
 \end{align} 
 
 \subsection{Boundary Conditions}
+
 \begin{table}[!htb]
 \centering
-    \caption{Boundary Conditions for 2D and 3D ANSYS Fluent setup}
+
+\caption{Boundary Conditions for 2D and 3D ANSYS Fluent setup}
     \label{tab:Boundary Conditions}
-\begin{tabular}{||p{3cm}|p{3cm}|p{6cm}||}
- \hline
- \centering
- Named Region  &  Boundary Condition  & Property Details\\
- \hline \hline
- \multicolumn{3}{||c||}{General Properties} \\
- \hline
- 
- Inlet & Inlet velocity & Velocity = 16.667 m/s (or 40 km/h)\\
- \hline
- Outlet & Outlet Pressure  & Gauge Pressure = 0 Pa  \\
- \hline
- Undertray (2D Enclosed)/Bluff Body & Stationary Wall & No-slip condition\\
- \hline
- Moving Floor & Moving Wall & Velocity = 16.667 m/s (or 40 km/h) in the flow direction\\
- \hline
- Enclosure &   Fluid (Air)  & Pressure = 101325 Pa
-Temperature = 288.15 K
-Density = 1.225 kg/m3
-ISA Sea Level Condition\\
- 
- \hline
- \multicolumn{3}{||c||}{3D Analyses} \\
- \hline
- 
- Symmetry Body & Symmetry  & -\\
- \hline
- Symmetry Top & Symmetry  & -\\
- \hline
- Symmetry Side & Symmetry & -\\
- \hline
- 
-\end{tabular}
+
+\begin{tabularx}{0.95\textwidth}{ 
+  || >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X ||
+  }
+  
+  \hline
+  Named Region & Boundary Conditions & Property Details \\
+  \hline
+  \multicolumn{3}{||>{\hsize=\dimexpr3\hsize+3\tabcolsep+\arrayrulewidth\relax\centering}X||}{General Properties}\\
+  
+  
+  \hline
+  Inlet & Inlet Velocity & Velocity = 16.667 $m/s$ (or 40 $km/h$) \\
+  \hline
+  Outlet & Outlet Pressure & Gauge Pressure = 0 Pa \\
+  \hline
+  Undertray (2D Enclosed) / Bluff Body & Stationary Wall & No-Slip Condition \\
+  \hline
+  Moving Floor & Moving Wall & Velocity = 16.667 $m/s$ or 40 $km/h$ In the Flow Direction\\
+  \hline
+  \multirow{4}{*}{Enclosure} & \multirow{4}{*}{Fluid (Air)} & Pressure = 101325 Pa\\
+  && Temperature = 288.15 K\\
+  && Density = 1.225 $\frac{kg}{m^3}$\\
+  && (ISA Sea Level Condition)\\
+  \hline
+  
+  \multicolumn{3}{||>{\hsize=\dimexpr3\hsize+2\tabcolsep+\arrayrulewidth\relax\centering}X||}{3 Dimensional Analyses}\\
+  \hline
+  Symmetry Body & Symmetry & - \\
+  \hline
+  Symmetry Top & Symmetry & - \\
+  \hline
+  Symmetry Side & Symmetry & - \\
+  \hline
+  
+\end{tabularx}
 \end{table}
+  
 
 \noindent Table \ref{tab:Boundary Conditions} shows the boundary conditions that were used for both the 2D and 3D analyses in the ANSYS Fluent solver. The main goal of these simulations is to simulate the flow behaviour at the bottom region of the car; therefore, a moving floor was employed in all simulations, with the same magnitude and direction as the oncoming flow. The use of a moving ground condition (or a belt in a wind tunnel) is physically correct, and represents the best option for capturing the ground effect in such an undertray \cite{Zhang2006GroundCars}\cite{Burgin1986WINDEFFECT}. The simulation environment was set from the International Standard Atmospheric (ISA) conditions at sea level. 
 
