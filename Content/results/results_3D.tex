@@ -11,7 +11,7 @@ An identical 2D sketch from geometry 3 of the 2D open flow section was used, whi
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.8\textwidth]{Figures/3D_OF/3D_OF_D.PNG}}
-    \caption{Geometry generated for 3D open flow analysis.}
+    \caption{Geometry Generated for 3D Open-Flow Analysis.}
     \label{fig:3D_OF_GEOM}
 \end{figure}
 
@@ -26,7 +26,7 @@ Due to the nature of the mesh, the $k-\omega$ SST model was used throughout this
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.9\textwidth]{Figures/Graph/3D_OF.png}}
-    \caption{Lift and drag variation of diffuser (left) and inlet (right) angle for all geometry configurations.}
+    \caption{Lift and Drag Variation of Diffuser (left) and Inlet (right) Angle for All Geometry Configurations.}
     \label{fig:3D_OF_PLOT_COMPARE_ALL}
 \end{figure}
 
@@ -36,7 +36,7 @@ Due to the nature of the mesh, the $k-\omega$ SST model was used throughout this
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.8\textwidth]{Figures/3D_OF/3D_OF_VECTOR_SUCTION.png}}
-    \caption{Vector diagram of velocity flow on the undertray's cross-section indicating flow suction from the side of the body.}
+    \caption{Vector Diagram of Velocity Flow on the Undertray's Cross-Section Indicating Flow Suction From The Side of The Body.}
     \label{fig:Vector_suction_diagram}
 \end{figure}
 
@@ -46,7 +46,7 @@ Due to the nature of the mesh, the $k-\omega$ SST model was used throughout this
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=1\textwidth]{Figures/3D_OF/3D_OF_INLET_COMPARE.png}}
-    \caption{Fore-flow streamline imposing the bluff-body and occurrence of leaking indicated by the trailing vortex ($Q$-criterion isosurface) at the inlet region (left and middle), and velocity vector of the flow indicating flow leaks at the inlet region (right).} 
+    \caption{Fore-Flow Streamline Imposing The Bluff-Body and Occurrence of Leaking Indicated by The Trailing Vortex ($Q$-Criterion Isosurface) at The Inlet Region (left and middle), and Velocity Vector of The Flow Indicating Flow Leaks at The Inlet Region (right).} 
     \label{fig:3D_OF_INLET_COMPARE}
 \end{figure}
 
@@ -56,7 +56,7 @@ Due to the nature of the mesh, the $k-\omega$ SST model was used throughout this
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.65\textwidth]{Figures/3D_OF/3D_OF_COMPARE_FENCES.png}}
-    \caption{Comparison of x-wall shear and vortex velocity ($Q$-criterion isosurface) generated on the diffuser region with (left) and without (right) fences applied.}
+    \caption{Comparison of X Wall-Shear and Vortex Velocity ($Q$-Criterion Isosurface) Generated on The Diffuser Region With (left) and Without (right) Fences Applied.}
       \label{fig:3D_OF_COMPARE_FENCES_SHEAR}
 \end{figure}
 
@@ -78,7 +78,7 @@ Overall previous analyses have given a fundamental understanding of flow behavio
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.8\textwidth]{Figures/UTP_FIGS/UT_BB_SIMPLIFY.png}}
-    \caption{Simplification of QFR car as an undertray's Bluff Body to simulate realistic flow around the body.}
+    \caption{Simplification of QFR Car as an Undertray's Bluff Body to Simulate Realistic Flow Around The Body.}
       \label{fig:3D_UT_BB_SIMPLIFICATION}
 \end{figure}
 
@@ -88,13 +88,14 @@ Overall previous analyses have given a fundamental understanding of flow behavio
     \centering
     \noindent\makebox[\textwidth]{
     \includegraphics[width=0.9\textwidth]{Figures/UTP_FIGS/3D_UT_BB_MESH_COMPILE.png}}
-    \caption{3D hybrid mesh generated for undertray prototype design with bluff body.}\label{fig:3D_UT_MESH}
+    \caption{3D Hybrid Mesh Generated for Undertray Prototype Design With Bluff Body.}
+    \label{fig:3D_UT_MESH}
 \end{figure}
 
 \noindent A hybrid mesh for 3D Undertray Prototype design is shown in figure \ref{fig:3D_UT_MESH} above. To capture details on the undertray region, 2 BOI were used on both car's surroundings and undertray area. The first BOI used 0.05 meters of sizing and 0.008 for the second BOI near the undertray region with cell growth rate of 1.1. Similarly to other analyses, inflation layers were used on the moving-floor and bluff body. $y^+$ = 1 was used near the body, with configurations of 8 inflation layer, first cell height of 0.00115 meters, and 1.1 cell growth rate. However, to reduce the jump cell size on the far field and still capture the boundary layer in the undertray region, smooth transition inflation layer was used on the floor region. smooth transition of 0.272 (default) with 5 inflation later and 1.1 cell growth rate were used. In results, around 9.5 to 9.8 millions elements were generated with average element quality of 0.785, skewness of 0.206, and aspect ratio of 2.399 which put the overall quality of the mesh in very good region \cite{Ansys2006ModelingFlows}.   
 
 \subsubsection{Results and Discussion}
-\textbf{Table \ref{UTB_RESULTS}} below shows the table of eight undertray simulation results to compare with similar simulation environment and settings. The bluff body alone was also simulated to be the base comparison to the one with the undertray attached. It is worth noting that UTP stands for Undertray Prototype as a name simplifications in file and simulations.
+\textbf{Table \ref{UTB_RESULTS}} below shows the table of eight undertray simulation results to compare with similar simulation environment and settings. The bluff body alone was also simulated to be the base comparison to the one with the undertray attached. It is worth noting that UTP stands for Undertray Prototype as a simplifications in file and simulations naming convention.
 
 
 \begin{table}[!htb]
@@ -138,7 +139,9 @@ UTP2 at 100 km/h & -711.31 & 197.74 & -3.60 & N/A & N/A\\
 \end{tabularx}
 \end{table}
 
-\noindent The bluff body acts as a baseline which used as a performance improvement indications compared to one with undertray prototype. To get an overall performance variable, efficiency can be deduced from lift to drag ratio in this section. The design process of the undertrays was generative, however some experimental designs were utilised. Several patterns can be seen based on the undertray's design features. It can be seen that all diffuser is shown to have improved the car's performance compared to the plain bluff body. Comparing UTP 0, 3, 4 to other geometries shows that side-diffuser increase the overall downforce but not necessarily the aerodynamics efficiency. For instance, UTP1 has higher downforce compared to UTP0 or UTP4, however UTP 1 has the highest value of aerodynamics efficiency. The results also shown that undertrays with diffuser variables (e.g. UTP4, UTP5, UTP6) have a higher downforce but also directly proportional to its drag. An additional features such as dual-variable diffuser angle and gurney flap such as in UTP3-UTP7 does increase the performance slightly, however the manufacturing complexity made it unnecessary to be included.  Worth mentioning that curved side-diffuser (side diffuser which follow the curve of the body) is the most prominent features that significantly improve the aerodynamics efficiency. It clearly seen that UTP2, UTP5, UTP6, and UTP7 values have almost doubled in efficiency due to the curved side diffuser presence. Based on the L/D ratio, it was decided that undertray prototype 2 (UTP2) will be used as the QFR car's undertray. UTP2 has 0.61 meters of 12 degrees of diffuser (including 6 linearly spaced vortex diffuser) and 1.1 meters side-diffuser with 10 degrees inlet and outlet angle. Other designs such as UTP5-7  have a slightly higher downforce however it also generated high value of drag which made their lift to drag ratio lower compared to UTP2. 
+\noindent The bluff body acts as a baseline which used as a performance improvement indications compared to one with undertray prototype. To get an overall performance variable, efficiency can be deduced from lift to drag ratio in this section. The design process of the undertrays was generative, however some experimental designs were utilised. Several patterns can be seen based on the undertray's design features. It can be seen that all diffuser is shown to have improved the car's performance compared to the plain bluff body. Comparing UTP 0, 3, 4 to other geometries shows that side-diffuser increase the overall downforce but not necessarily the aerodynamics efficiency. For instance, UTP1 has higher downforce compared to UTP0 or UTP4, however UTP 1 has the highest value of aerodynamics efficiency. The results also shown that undertrays with diffuser variables (e.g. UTP4, UTP5, UTP6) have a higher downforce but also directly proportional to its drag. An additional features such as dual-variable diffuser angle and gurney flap such as in UTP3-UTP7 does increase the performance slightly, however the manufacturing complexity made it unnecessary to be included.  Worth mentioning that curved side-diffuser (side diffuser which follow the curve of the body) is the most prominent features that significantly improve the aerodynamics efficiency. It clearly seen that UTP2, UTP5, UTP6, and UTP7 values have almost doubled in efficiency due to the presence of curved side diffuser .
+
+\noindent Based on the L/D ratio, it was decided that undertray prototype 2 (UTP2) will be used as the QFR car's undertray. UTP2 has 0.61 meters of 12 degrees of diffuser (including 6 linearly spaced vortex diffuser) and 1.1 meters side-diffuser with 10 degrees inlet and outlet angle. Technical Drawing of the final undertray design (UTP2) can be seen on \textbf{figure \ref{fig:UTP2_FINAL_DESIGN} in appendix D}. Other designs such as UTP5-7  have a slightly higher downforce however it also generated high value of drag which made their lift to drag ratio lower compared to UTP2. Lower Lift to drag ratio is important in this case to balance the undertray performance in both high and low speed racing.
 
 \begin{figure}[!htb] 
     \centering
@@ -148,7 +151,13 @@ UTP2 at 100 km/h & -711.31 & 197.74 & -3.60 & N/A & N/A\\
       \label{fig:3D_QCRIT_WSHEAR_UTP2}
 \end{figure}
 
-\textbf{Figure \ref{fig:3D_QCRIT_WSHEAR_UTP2}} shows the X wall shear on the bluff body and vortices indicated by the Q-Criterion. Similar to all previous analysis, to improve the lift 
+\noindent \textbf{Figure \ref{fig:3D_QCRIT_WSHEAR_UTP2}}  shows the X wall shear on the bluff body and vortices indicated by the Q-Criterion. Similar to the previous analysis, the negative X Wall-Shear indicated the separation region on the undertray. Similar to all previous analysis, flow attachment is a crucial facet in improving the overall performance. Vertices formed at the rear generated by vortex generator play a crucial role in affecting the undertray's performance. A good undertray design is graded by its  effectiveness to capture or trap the vortices which creates a suction effect \cite{Bouferrouk2014OnVehicles}, hence higher downforce and traction can be achieved. It can be seen from the figure \ref{fig:3D_QCRIT_WSHEAR_UTP2} above that the flow stay attached on the diffuser region where vortex formed, and blue region on the middle of the diffuser are indicating flow separation where vortex formation is not prominent. UTP 2,5,6 and 7 have similar side-diffuser geometry, however the diffuser geometries for each undertray is distinct. UTP 5, 6, and 7 have a higher angle variable on the outermost, this allows larger vortex generated which generated a slight increase in downforce (see table \ref{UTB_RESULTS}). Nonetheless, ineffective vortex generation which cause shedding induced early flow separation on the diffuser's boundary layer, causing a significant drag increase. It can be seen from \textbf{figure \ref{fig:UTP_BOTTOM_QCRIT_ALL_COMPARE} in Appendix D} that region of outermost diffuser angle of UTP 5, 6, and 7 shows lower x wall-shear value (indicated by the light blue region), suggesting that flow separation occurred at those region which generated unstable and shedding vortex, hence drag increase. Comparing undertray with similar lift value (e.g. UTP 2, 5, 6, and 7), it was suspected from figure \ref{fig:UTP_BOTTOM_QCRIT_ALL_COMPARE} and \ref{fig:UTP_ISO_QCRIT_ALL_COMPARE} that undertray with higher drag (UTP 5, 6, and 7) has unstructured vortices near the outlet that may indicates vortex instability, compared to UTP2 which has cleaner trailing vortex. Moreover, the curved side diffuser sculpt the flow sideways from the inlet which increase the acceleration and decreases the pressure. This condition generated a sizeable corner vortex and low pressure region at the turning point, increased the size of trapped vortex and increase the overall downforce.
+
+%insert overall performance improvements
+
+
+\noindent However, the simulation used clean bluff body which allows clean air to enter the inlet region on both nose and side diffuser. This is not ideal in real life case, as number of parts, such as; suspensions, tyres, and front wing (future design) might disturb the incoming flow and affect the vortex generation at rear. It can be concluded that downforce improvement and drag reduction is the matter of flow strategy and management for an effective flow control to achieve a stable vortex using intelligent analysis and advanced undertray design, therefore focus on stable vortex generation shall be the priority for future work in the undertray design. Another limitation is all the simulations were done in partial model. A paper by Senior \cite{Senior2001TheEffect} suggested the importance of symmetric flow in high performance undertray and the analyses in this paper assumed a symmetrical flow in the simulation. Hence, it is also important in the future paper that simulation of the undertray is done with full geometry.
+
 
 
 
