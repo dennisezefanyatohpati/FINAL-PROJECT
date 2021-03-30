@@ -17,21 +17,13 @@ To understand the flow behaviour in various undertray geometries, some kind of a
 
 \noindent The goal of the 2D and 3D bluff body simulations is to obtain and analyse the trend in performance resulting from changes to the undertray geometry; therefore, a simple yet high quality mesh could be generated in an unstructured manner. Local refinement around the solid body is recommended \cite{Lanfrit2005BestFLUENT} to achieve reasonable results and representation of the flow, especially around the undertray. Moreover, this technique allows reduced mesh density in the far-field sections less likely to be affected by or affecting the result. Another aspect of quality meshing is the mesh metrics such as skewness and growth ratio. For automotive applications, it is recommended to have skewness less than 0.45 and a maximum growth rate of less than 20\% \cite{Lanfrit2005BestFLUENT}. 
 
-\noindent One crucial factor in an undertray flow is the development of the boundary layer and how this interacts with the moving floor. The accuracy of this aspect is dependent on the quality of the grid near the wall, and on the wall function being used. To generate a high quality inflation layer, it is essential to make sure the y+ value (first layer grid height) does not exceed the inner boundary layer region, which can be calculated using the expression:
+\noindent One crucial factor in an undertray flow is the development of the boundary layer, and how this interacts with the moving floor. The accuracy of this aspect is dependent on the quality of the grid near the wall, and on the wall function being used. To generate a high quality inflation layer, it is essential to make sure the y+ value (first layer grid height) does not exceed the inner boundary layer region, which can be calculated using the expression:
 
 \begin{equation}
-    y^+ = \frac{\rho U_\tau \partial y}{\mu}, where \quad U_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
+    y^+ = \frac{\rho U_\tau y}{\mu}, where \quad U_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
 \end{equation}
 
-\noindent Figure~\ref{fig:inflation layer} shows an illustration of the relevance of the $y^+$ value close to a wall. The turbulence model being used by the solver also has to be considered in defining the required $y^+$ value. Some turbulence modelling requires a very low $y^+$, whereas some can tolerate higher values. The detail of $y^+$ value in the various turbulence models will be discussed in the next section. 
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[height=4cm]{Figures/inflation_layer.jpg}
-    \caption{Representation of Grid y$^+$ Close to a Viscous Wall \cite{Anonymous2013Inflate4Blog}.}
-    \label{fig:inflation layer}
-\end{figure}
-
+\noindent The turbulence model being used by the solver also has to be considered in defining the required $y^+$ value. Some turbulence modelling requires a very low $y^+$, whereas some can tolerate higher values. The detail of $y^+$ value in the various turbulence models will be discussed in the next section. 
 
 \subsection{Numerical Method}
 \label{section: Numberical Method}
