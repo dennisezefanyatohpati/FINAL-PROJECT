@@ -20,7 +20,7 @@ To understand the flow behaviour in various undertray geometries, some kind of a
 \noindent One crucial factor in an undertray flow is the development of the boundary layer, and how this interacts with the moving floor. The accuracy of this aspect is dependent on the quality of the grid near the wall, and on the wall function being used. To generate a high quality inflation layer, it is essential to make sure the y+ value (first layer grid height) does not exceed the inner boundary layer region, which can be calculated using the expression:
 
 \begin{equation}
-    y^+ = \frac{\rho U_\tau y}{\mu}, \text{where} \quad U_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
+    y^+ = \frac{\rho U_\tau y}{\mu}, \text{where}\quad U_\tau = \sqrt{\frac{\tau_w}{\rho}} = U \sqrt{\frac{1}{2}C_f}
 \end{equation}
 
 \noindent The turbulence model being used by the solver also has to be considered in defining the required $y^+$ value. Some turbulence modelling requires a very low $y^+$, whereas some can tolerate higher values. The detail of $y^+$ value in the various turbulence models will be discussed in the next section. 
@@ -73,7 +73,7 @@ The SST model is another two equation-model. It combines both the $k-\epsilon$ a
   \hline
   \multirow{4}{*}{Enclosure} & \multirow{4}{*}{Fluid (Air)} & Pressure = 101325 Pa\\
   && Temperature = 288.15 K\\
-  && Density = 1.225 $\frac{kg}{m^3}$\\
+  && Density = 1.225 $kg/m^3$\\
   && (ISA Sea Level Condition)\\
   \hline
   
