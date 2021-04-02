@@ -1,14 +1,14 @@
 \section{Methodology}
 To understand the flow behaviour in various undertray geometries, some kind of analysis of the fluid dynamics is required. The rapid development of computational power has allowed for more accurate and reliable computational analysis techniques such as computational fluid dynamics (CFD) \cite{Andersson2011ComputationalEngineers}. The usage of CFD allows engineers to simplify design processes and to achieve an accurate flow prediction in a relatively short period of time, allowing engineers to do more design iterations and thus produce better designs.
 
-\begin{figure}[!htb]
+\noindent The methodology used in this project consists of three phases. These phases are: 2D enclosed \& open-flow; 3D bluff-body flow; 3D full undertray flow. The first phase consists of 2D analysis, which analyses the undertray variables on a Venturi-tube like geometry, and an open-flow analysis to determine the effect of a simple bluff body with similar undertray variables. The 3D bluff body phase takes the 2D geometry, extrudes it into a 3D geometry, and then analyses it. Lastly is the 3D full undertray, in which the results from previous analyses will be used to optimise the final undertray design's geometry. A simplified traced body from the QFR 2021 car will be attached to the undertray to achieve performance results without the geometrical complexity of the full CAD model. The full workflow of the process is illustrated in Figure~\ref{fig:project methodology}. This project will be entirely computationally based, and makes use of ANSYS Fluent as the default working platform.
+
+\begin{figure}[!h]
     \centering
     \makebox[\textwidth]{\includegraphics[scale=0.15]{Figures/project_methodology_chart.png}}
     \caption{Project Methodology Flow Chart}
     \label{fig:project methodology}
 \end{figure}
-
-\noindent The methodology used in this project consists of three phases. These phases are: 2D enclosed \& open-flow; 3D bluff-body flow; 3D full undertray flow. The first phase consists of 2D analysis, which analyses the undertray variables on a Venturi-tube like geometry, and an open-flow analysis to determine the effect of a simple bluff body with similar undertray variables. The 3D bluff body phase takes the 2D geometry, extrudes it into a 3D geometry, and then analyses it. Lastly is the 3D full undertray, in which the results from previous analyses will be used to optimise the final undertray design's geometry. A simplified traced body from the QFR 2021 car will be attached to the undertray to achieve performance results without the geometrical complexity of the full CAD model. The full workflow of the process is illustrated in Figure~\ref{fig:project methodology}. This project will be entirely computationally based, and makes use of ANSYS Fluent as the default working platform.
 
 \subsection{Pre-Processing \& Solver Setup}
 
